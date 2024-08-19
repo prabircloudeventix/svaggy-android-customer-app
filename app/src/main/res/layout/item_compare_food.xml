@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clMainItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_24sdp"
+        android:layout_marginBottom="@dimen/_24sdp"
+        android:elevation="@dimen/_1sdp"
+        android:background="@drawable/qty_add_bg">
+
+        <TextView
+            android:id="@+id/txt_restaurants_name"
+            style="@style/textViewBlack16SpBold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:layout_marginEnd="@dimen/_18sdp"
+            android:text="Anchor &amp; James"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvRating"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_26sdp"
+            android:layout_marginTop="@dimen/dp13"
+            android:layout_marginEnd="@dimen/_14sdp"
+            android:background="@drawable/rating_green"
+            android:gravity="center_vertical"
+            android:paddingStart="@dimen/dp12"
+            android:paddingEnd="@dimen/_22sdp"
+            android:text="4.5"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp12"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="RtlSymmetry" />
+
+        <ImageView
+            android:id="@+id/imageView21"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dp8"
+            android:contentDescription="@string/rating_star"
+            android:src="@drawable/star"
+            app:layout_constraintBottom_toBottomOf="@+id/tvRating"
+            app:layout_constraintEnd_toEndOf="@+id/tvRating"
+            app:layout_constraintTop_toTopOf="@+id/tvRating" />
+
+        <ImageView
+            android:id="@+id/imageView15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_12sdp"
+            android:layout_marginEnd="@dimen/_22sdp"
+            android:src="@drawable/ic_location"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_restaurants_name" />
+
+        <TextView
+            android:id="@+id/txtDistance"
+            style="@style/textViewStyle14Sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3 Miles away"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView15"
+            app:layout_constraintStart_toEndOf="@+id/imageView15"
+            app:layout_constraintTop_toTopOf="@+id/imageView15" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerCompareMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:overScrollMode="never"
+            android:paddingTop="@dimen/_8sdp"
+            android:paddingStart="@dimen/_12sdp"
+            android:paddingBottom="@dimen/_12sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtDistance"
+            tools:itemCount="1"
+            tools:listitem="@layout/item_compare_food_menu" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

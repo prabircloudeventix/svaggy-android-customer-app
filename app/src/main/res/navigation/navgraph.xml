@@ -1,0 +1,560 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navgraph"
+    app:startDestination="@id/homeFragment">
+
+
+
+
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.svaggy.ui.fragments.home.screens.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_restaurantMenuScreen"
+            app:destination="@id/restaurantMenuScreen" />
+        <action
+            android:id="@+id/action_homeFragment_to_allRestaurantsScreen"
+            app:destination="@id/allRestaurantsScreen" />
+        <action
+            android:id="@+id/action_homeFragment_to_searchFragment"
+            app:destination="@id/searchFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_homeLocationScreen"
+            app:destination="@id/homeLocationScreen" />
+        <action
+            android:id="@+id/action_homeFragment_to_compareFoodPrices"
+            app:destination="@id/compareFoodPrices" />
+        <action
+            android:id="@+id/action_homeFragment_to_comboScreen"
+            app:destination="@id/comboScreen" />
+        <action
+            android:id="@+id/action_homeFragment_to_notificationScreen"
+            app:destination="@id/notificationScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/EditEmailFragment"
+        android:name="com.svaggy.ui.fragments.editAuth.screens.EditEmailFragment"
+        android:label="fragment_second_login"
+        tools:layout="@layout/fragment_edit_email">
+
+        <action
+            android:id="@+id/action_EditEmailFragment_to_verifyEmailFragment"
+            app:destination="@id/verifyEmailFragment" >
+            <argument
+                android:name="email"
+                app:argType="string" />
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/emailVerifyOTP"
+        android:name="com.svaggy.ui.fragments.editAuth.screens.VerifyOtpScreen"
+        android:label="fragment_email_verify_o_t_p"
+        tools:layout="@layout/fragment_verify_otp_screen">
+
+        <action
+            android:id="@+id/action_emailVerifyOTP_to_editProfile"
+            app:destination="@id/editProfile" />
+    </fragment>
+    <fragment
+        android:id="@+id/currentLocationFragment"
+        android:name="com.svaggy.ui.fragments.location.screens.CurrentLocationFragment"
+        android:label="fragment_current_location"
+        tools:layout="@layout/fragment_current_location">
+        <action
+            android:id="@+id/action_currentLocationFragment_to_cartMoreItemScreen"
+            app:destination="@id/cartMoreItemScreen" />
+        <action
+            android:id="@+id/action_currentLocationFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_currentLocationFragment_to_editAddressScreen"
+            app:destination="@id/editAddressScreen"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/cartScreen"
+        android:name="com.svaggy.ui.fragments.cart.screens.CartScreen"
+        android:label="fragment_cart"
+        tools:layout="@layout/fragment_cart">
+        <action
+            android:id="@+id/action_cartScreen_to_cartMoreItemScreen"
+            app:destination="@id/cartMoreItemScreen" >
+            <argument
+                android:name="deliveryType"
+                app:argType="string" />
+
+
+        </action>
+        <action
+            android:id="@+id/action_cartScreen_to_restaurantMenuScreen"
+            app:destination="@id/restaurantMenuScreen" />
+        <action
+            android:id="@+id/action_cartScreen_to_allRestaurantsScreen"
+            app:destination="@id/allRestaurantsScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/editProfile"
+        android:name="com.svaggy.ui.fragments.profile.screens.EditProfileScreen"
+        android:label="fragment_edit_profile"
+        tools:layout="@layout/fragment_edit_profile">
+
+        <action
+            android:id="@+id/action_editProfile_to_cardPaymentScreen"
+            app:destination="@id/cardPaymentScreen" />
+        <action
+            android:id="@+id/action_editProfile_to_editPhoneFragment"
+            app:destination="@id/editPhoneFragment" />
+        <action
+            android:id="@+id/action_editProfile_to_EditEmailFragment"
+            app:destination="@id/EditEmailFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/cartMoreItemScreen"
+        android:name="com.svaggy.ui.fragments.cart.screens.CartMoreItemScreen"
+        android:label="fragment_cart_more_item_screen"
+        tools:layout="@layout/fragment_cart_more_item_screen">
+        <action
+            android:id="@+id/action_cartMoreItemScreen_to_currentLocationFragment"
+            app:destination="@id/currentLocationFragment" />
+        <action
+            android:id="@+id/action_cartMoreItemScreen_to_cardPaymentScreen"
+            app:destination="@id/cardPaymentScreen" />
+        <action
+            android:id="@+id/action_cartMoreItemScreen_to_couponCodeScreen"
+            app:destination="@id/couponCodeScreen" >
+            <argument
+                android:name="restaurantId"
+                app:argType="string" />
+            <argument
+                android:name="checkOutId"
+                app:argType="string" />
+        </action>
+        <action
+            android:id="@+id/action_cartMoreItemScreen_to_walletAddFund"
+            app:destination="@id/walletAddFund" >
+            <argument
+                android:name="isFrom"
+                app:argType="string" />
+
+        </action>
+        <action
+            android:id="@+id/action_cartMoreItemScreen_to_editProfile"
+            app:destination="@id/editProfile" />
+        <action
+            android:id="@+id/action_cartMoreItemScreen_to_orderConfirmedScreen"
+            app:destination="@id/orderConfirmedScreen" >
+            <argument
+                android:name="orderId"
+                app:argType="string" />
+
+            <argument
+                android:name="checkOrderType"
+                app:argType="boolean" />
+            <argument
+                android:name="boosterArray"
+                app:argType="integer[]"
+                android:defaultValue="@null"
+                app:nullable="true"/>
+
+            <argument
+                android:name="restaurantId"
+                app:argType="string" />
+
+
+
+        </action>
+
+
+    </fragment>
+    <fragment
+        android:id="@+id/cardPaymentScreen"
+        android:name="com.svaggy.ui.fragments.payment.screens.CardPaymentScreen"
+        android:label="fragment_card_payment_screen"
+        tools:layout="@layout/fragment_card_payment_screen">
+        <action
+            android:id="@+id/action_cardPaymentScreen_to_addNewCardScreen"
+            app:destination="@id/addNewCardScreen" />
+        <action
+            android:id="@+id/action_cardPaymentScreen_to_orderConfirmedScreen"
+            app:destination="@id/orderConfirmedScreen" />
+        <action
+            android:id="@+id/action_cardPaymentScreen_to_manageCard"
+            app:destination="@id/manageCard" >
+            <argument
+                android:name="cardNumber"
+                app:argType="string" />
+
+            <argument
+                android:name="cardDate"
+                app:argType="string" />
+
+            <argument
+                android:name="stripeToken"
+                app:argType="string" />
+
+            <argument
+                android:name="cardName"
+                app:argType="string" />
+
+        </action>
+
+    </fragment>
+    <fragment
+        android:id="@+id/couponCodeScreen"
+        android:name="com.svaggy.ui.fragments.cart.screens.CouponCodeScreen"
+        android:label="fragment_coupon_code_screen"
+        tools:layout="@layout/fragment_coupon_code_screen" >
+        <action
+            android:id="@+id/action_couponCodeScreen_to_cartMoreItemScreen"
+            app:destination="@id/cartMoreItemScreen"
+            app:popUpToInclusive="true"
+            app:popUpTo="@+id/main_nav_graph"
+            >
+            <argument
+                android:name="coupon_Id"
+                app:argType="string" />
+
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/addNewCardScreen"
+        android:name="com.svaggy.ui.fragments.payment.screens.AddNewCardScreen"
+        android:label="fragment_add_new_card_screen"
+        tools:layout="@layout/fragment_add_new_card_screen" />
+    <fragment
+        android:id="@+id/orderConfirmedScreen"
+        android:name="com.svaggy.ui.fragments.order.screens.OrderConfirmedScreen"
+        android:label="fragment_order_confirmed_screen"
+        tools:layout="@layout/fragment_order_confirmed_screen">
+        <action
+            android:id="@+id/action_orderConfirmedScreen_to_trackOrderScreen"
+            app:destination="@id/trackOrderScreen"
+            app:popUpTo="@id/orderConfirmedScreen">
+            <argument
+                android:name="order_id"
+                app:argType="string" />
+
+
+        </action>
+        <action
+            android:id="@+id/action_orderConfirmedScreen_to_trackPickOrder"
+            app:destination="@id/trackPickOrder" >
+            <argument
+                android:name="order_id"
+                app:argType="string" />
+
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/trackOrderScreen"
+        android:name="com.svaggy.ui.fragments.order.screens.TrackOrderScreen"
+        android:label="fragment_track_order_screen"
+        tools:layout="@layout/fragment_track_order_screen">
+        <action
+            android:id="@+id/action_trackOrderScreen_to_orderDetails"
+            app:destination="@id/orderDetails" >
+            <argument
+                android:name="order_id"
+                app:argType="string" />
+        </action>
+        <action
+            android:id="@+id/action_trackOrderScreen_to_profileScreen"
+            app:destination="@id/profileScreen"
+            app:popUpTo="@id/trackOrderScreen"
+            app:popUpToInclusive="true"/>
+        <action
+            android:id="@+id/action_trackOrderScreen_to_orderReview"
+            app:destination="@id/orderReview" >
+            <argument
+                android:name="order_id"
+                app:argType="string" />
+
+        </action>
+        <action
+            android:id="@+id/action_trackOrderScreen_to_deliveryReview"
+            app:destination="@id/deliveryReview" >
+            <argument
+                android:name="order_id"
+                app:argType="string" />
+
+        </action>
+
+    </fragment>
+    <fragment
+        android:id="@+id/ordersScreen"
+        android:name="com.svaggy.ui.fragments.order.screens.OrdersScreen"
+        android:label="fragment_orders_screen"
+        tools:layout="@layout/fragment_orders_screen" >
+        <action
+            android:id="@+id/action_ordersScreen_to_trackOrderScreen"
+            app:destination="@id/trackOrderScreen" >
+
+        </action>
+        <action
+            android:id="@+id/action_ordersScreen_to_orderDetails"
+            app:destination="@id/orderDetails" />
+        <action
+            android:id="@+id/action_ordersScreen_to_orderReview"
+            app:destination="@id/orderReview" />
+        <action
+            android:id="@+id/action_ordersScreen_to_profileScreen"
+            app:destination="@id/profileScreen" />
+        <action
+            android:id="@+id/action_ordersScreen_to_trackPickOrder"
+            app:destination="@id/trackPickOrder" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/profileScreen"
+        android:name="com.svaggy.ui.fragments.profile.screens.ProfileScreen"
+        android:label="fragment_profile_screen"
+        tools:layout="@layout/fragment_profile_screen">
+
+
+        <action
+            android:id="@+id/action_profileScreen_to_editProfile"
+            app:destination="@id/editProfile" />
+
+        <action
+            android:id="@+id/action_profileScreen_to_addressScreen"
+            app:destination="@id/addressScreen" />
+        <action
+            android:id="@+id/action_profileScreen_to_myWalletFragment"
+            app:destination="@id/myWalletFragment" />
+        <action
+            android:id="@+id/action_profileScreen_to_cardPaymentScreen"
+            app:destination="@id/cardPaymentScreen" />
+        <action
+            android:id="@+id/action_profileScreen_to_settingScreen"
+            app:destination="@id/settingScreen" />
+        <action
+            android:id="@+id/action_profileScreen_to_helpScreen"
+            app:destination="@id/helpScreen" />
+        <action
+            android:id="@+id/action_profileScreen_to_ordersScreen"
+            app:destination="@id/ordersScreen" >
+            <argument
+                android:name="type"
+                app:argType="string" />
+
+        </action>
+        <action
+            android:id="@+id/action_profileScreen_to_accountDeleteFragment"
+            app:destination="@id/accountDeleteFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/restaurantMenuScreen"
+        android:name="com.svaggy.ui.fragments.home.screens.RestaurantMenuScreen"
+        android:label="fragment_restaurant_menu_screen"
+        tools:layout="@layout/fragment_restaurant_menu_screen">
+        <action
+            android:id="@+id/action_restaurantMenuScreen_to_cartMoreItemScreen"
+            app:destination="@id/cartMoreItemScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/allRestaurantsScreen"
+        android:name="com.svaggy.ui.fragments.home.screens.AllRestaurantsScreen"
+        android:label="fragment_all_restaurants_screen"
+        tools:layout="@layout/fragment_all_restaurants_screen">
+        <action
+            android:id="@+id/action_allRestaurantsScreen_to_restaurantMenuScreen"
+            app:destination="@id/restaurantMenuScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.svaggy.ui.fragments.home.screens.SearchFragment"
+        android:label="fragment_search"
+        tools:layout="@layout/fragment_search" >
+        <action
+            android:id="@+id/action_searchFragment_to_allRestaurantsScreen"
+            app:destination="@id/allRestaurantsScreen" />
+        <action
+            android:id="@+id/action_searchFragment_to_restaurantMenuScreen"
+            app:destination="@id/restaurantMenuScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeLocationScreen"
+        android:name="com.svaggy.ui.fragments.location.screens.HomeLocationScreen"
+        android:label="fragment_home_location"
+        tools:layout="@layout/fragment_home_location" >
+        <action
+            android:id="@+id/action_homeLocationScreen_to_currentLocationFragment"
+            app:destination="@id/currentLocationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addressScreen"
+        android:name="com.svaggy.ui.fragments.location.address.screens.AddressScreen"
+        android:label="fragment_address_screen"
+        tools:layout="@layout/fragment_address_screen" >
+        <action
+            android:id="@+id/action_addressScreen_to_currentLocationFragment"
+            app:destination="@id/currentLocationFragment" />
+        <action
+            android:id="@+id/action_addressScreen_to_profileScreen2"
+            app:destination="@id/profileScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/editAddressScreen"
+        android:name="com.svaggy.ui.fragments.location.address.screens.EditAddressScreen"
+        android:label="fragment_edit_address_screen"
+        tools:layout="@layout/fragment_edit_address_screen" >
+        <action
+            android:id="@+id/action_editAddressScreen_to_addressScreen"
+            app:destination="@id/addressScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/walletAddFund"
+        android:name="com.svaggy.ui.fragments.wallet.screens.WalletAddFund"
+        android:label="fragment_wallet_add_fund"
+        tools:layout="@layout/fragment_wallet_add_fund" >
+        <action
+            android:id="@+id/action_walletAddFund_to_moneyAddedSuccessfully"
+            app:destination="@id/moneyAddedSuccessfully">
+
+            <argument
+                android:name="isFrom"
+                app:argType="string" />
+            <argument
+                android:name="added_amount"
+                app:argType="string" />
+            <argument
+                android:name="updated_balance"
+                app:argType="string" />
+
+        </action>
+        <action
+            android:id="@+id/action_walletAddFund_to_addNewCardScreen"
+            app:destination="@id/addNewCardScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/moneyAddedSuccessfully"
+        android:name="com.svaggy.ui.fragments.wallet.screens.MoneyAddedSuccessfully"
+        android:label="fragment_money_added_successfully"
+        tools:layout="@layout/fragment_money_added_successfully" />
+    <fragment
+        android:id="@+id/myWalletFragment"
+        android:name="com.svaggy.ui.fragments.wallet.screens.MyWalletFragment"
+        android:label="fragment_my_wallet"
+        tools:layout="@layout/fragment_my_wallet" >
+        <action
+            android:id="@+id/action_myWalletFragment_to_walletAddFund"
+            app:destination="@id/walletAddFund" />
+    </fragment>
+    <fragment
+        android:id="@+id/compareFoodPrices"
+        android:name="com.svaggy.ui.fragments.banner.screens.CompareFoodPrices"
+        android:label="fragment_compare_food_prices"
+        tools:layout="@layout/fragment_compare_food_prices" >
+        <action
+            android:id="@+id/action_compareFoodPrices_to_restaurantMenuScreen"
+            app:destination="@id/restaurantMenuScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/comboScreen"
+        android:name="com.svaggy.ui.fragments.banner.screens.ComboScreen"
+        android:label="fragment_combo_screen"
+        tools:layout="@layout/fragment_combo_screen" >
+        <action
+            android:id="@+id/action_comboScreen_to_restaurantMenuScreen"
+            app:destination="@id/restaurantMenuScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/notificationScreen"
+        android:name="com.svaggy.ui.fragments.home.screens.NotificationScreen"
+        android:label="fragment_notification_screen"
+        tools:layout="@layout/fragment_notification_screen" />
+    <fragment
+        android:id="@+id/settingScreen"
+        android:name="com.svaggy.ui.fragments.profile.screens.SettingScreen"
+        android:label="fragment_setting"
+        tools:layout="@layout/fragment_setting_screen" >
+        <action
+            android:id="@+id/action_settingScreen_to_languageScreen"
+            app:destination="@id/languageScreen" >
+            <argument
+                android:name="en"
+                app:argType="string" />
+
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/helpScreen"
+        android:name="com.svaggy.ui.fragments.profile.screens.HelpScreen"
+        android:label="fragment_help"
+        tools:layout="@layout/fragment_help_screen" />
+    <fragment
+        android:id="@+id/orderDetails"
+        android:name="com.svaggy.ui.fragments.order.screens.OrderDetails"
+        android:label="fragment_order_details"
+        tools:layout="@layout/fragment_order_details" />
+    <fragment
+        android:id="@+id/languageScreen"
+        android:name="com.svaggy.ui.fragments.profile.screens.LanguageScreen"
+        android:label="fragment_language_screen"
+        tools:layout="@layout/fragment_language_screen" />
+    <fragment
+        android:id="@+id/orderReview"
+        android:name="com.svaggy.ui.fragments.order.screens.OrderReview"
+        android:label="fragment_order_review"
+        tools:layout="@layout/fragment_order_review" />
+    <fragment
+        android:id="@+id/manageCard"
+        android:name="com.svaggy.ui.fragments.payment.screens.ManageCard"
+        android:label="fragment_manage_card"
+        tools:layout="@layout/fragment_manage_card" />
+    <fragment
+        android:id="@+id/editPhoneFragment"
+        android:name="com.svaggy.ui.fragments.editAuth.screens.EditPhoneFragment"
+        android:label="EditPhoneFragment" >
+        <action
+            android:id="@+id/action_editPhoneFragment_to_emailVerifyOTP"
+            app:destination="@id/emailVerifyOTP" >
+            <argument
+                android:name="number"
+                app:argType="string" />
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/verifyEmailFragment"
+        android:name="com.svaggy.ui.fragments.editAuth.screens.VerifyEmailFragment"
+        android:label="VerifyEmailFragment" />
+    <fragment
+        android:id="@+id/accountDeleteFragment"
+        android:name="com.svaggy.ui.fragments.profile.screens.AccountDeleteFragment"
+        android:label="fragment_account_delete"
+        tools:layout="@layout/fragment_account_delete" />
+    <fragment
+        android:id="@+id/trackPickOrder"
+        android:name="com.svaggy.ui.fragments.order.screens.TrackPickOrder"
+        android:label="fragment_track_pick_order"
+        tools:layout="@layout/fragment_track_pick_order" >
+        <action
+            android:id="@+id/action_trackPickOrder_to_orderDetails"
+            app:destination="@id/orderDetails" >
+            <argument
+                android:name="order_id"
+                app:argType="string" />
+        </action>
+        <action
+            android:id="@+id/action_trackPickOrder_to_orderReview"
+            app:destination="@id/orderReview" >
+            <argument
+                android:name="order_id"
+                app:argType="string" />
+
+        </action>
+
+    </fragment>
+    <fragment
+        android:id="@+id/deliveryReview"
+        android:name="com.svaggy.ui.fragments.order.screens.DeliveryReview"
+        android:label="fragment_delivery_review"
+        tools:layout="@layout/fragment_delivery_review" />
+
+</navigation>

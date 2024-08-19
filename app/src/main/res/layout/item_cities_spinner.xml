@@ -1,0 +1,11 @@
+<TextView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:text="@string/sample_text"
+    android:textColor="@color/txt_gray"
+    android:textSize="@dimen/_12ssp"
+    android:drawablePadding="@dimen/_5ssp"
+    app:drawableEndCompat="@drawable/ic_arrow_down" />

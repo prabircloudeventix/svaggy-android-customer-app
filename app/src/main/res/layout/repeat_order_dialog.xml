@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/white_curve_twoside"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_24sdp"
+            style="@style/textViewBlack16SpBold"
+            android:layout_marginTop="@dimen/_20ssp"
+            android:text="@string/repat_last"
+            app:layout_constraintBottom_toBottomOf="@+id/imgCancel"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/imgCancel" />
+
+        <ImageView
+            android:id="@+id/imgCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/_20sdp"
+            android:paddingEnd="@dimen/_24sdp"
+            android:paddingStart="@dimen/_24sdp"
+            android:paddingBottom="@dimen/_5ssp"
+            android:src="@drawable/cancel_icon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/divider8"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:background="@color/stroke_colr"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imgCancel" />
+
+
+
+
+
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerCustomizeItems"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:layout_marginStart="@dimen/_24sdp"
+            android:layout_marginEnd="@dimen/_24sdp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:nestedScrollingEnabled="true"
+            app:layout_constraintBottom_toTopOf="@id/addNewBtn"
+            app:layout_constraintTop_toTopOf="@id/divider8"
+            tools:itemCount="3"
+            tools:listitem="@layout/repeat_order_rc_item" />
+
+
+
+        <TextView
+            android:id="@+id/addNewBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/recyclerCustomizeItems"
+            android:layout_marginStart="@dimen/_20ssp"
+            android:fontFamily="@font/jostbold"
+            android:textColor="@color/primaryColor"
+            android:layout_marginTop="@dimen/_20ssp"
+            android:background="@drawable/add_new_btn_bg"
+            android:text="@string/add_new_customization"
+            android:gravity="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="@dimen/_20ssp"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:layout_marginEnd="@dimen/_20ssp"
+            android:textSize="16sp"
+            />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</androidx.core.widget.NestedScrollView>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white">
+
+
+
+
+        <TextView
+            android:id="@+id/setEnglish"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:fontFamily="@font/jostmedium"
+            android:textColor="@color/black"
+            android:layout_marginStart="@dimen/_20ssp"
+            android:layout_marginTop="@dimen/_10ssp"
+            android:paddingTop="@dimen/_5ssp"
+            android:drawablePadding="@dimen/_5ssp"
+            android:paddingBottom="@dimen/_5ssp"
+            android:text="English"
+            android:textSize="14sp"
+            />
+
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#E5E9EB"
+            app:layout_constraintTop_toBottomOf="@id/setEnglish"
+            android:layout_marginTop="@dimen/_5ssp"/>
+
+
+        <TextView
+            android:id="@+id/setCzech"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/view"
+            app:layout_constraintStart_toStartOf="parent"
+            android:fontFamily="@font/jostmedium"
+            android:textColor="@color/black"
+            android:layout_marginStart="@dimen/_20ssp"
+            android:layout_marginTop="@dimen/_10ssp"
+            android:paddingTop="@dimen/_5ssp"
+            android:drawablePadding="@dimen/_5ssp"
+            android:paddingBottom="@dimen/_5ssp"
+            android:text="Czech"
+            android:textSize="14sp"
+            />
+
+        <View
+
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#E5E9EB"
+            app:layout_constraintTop_toBottomOf="@id/setCzech"
+            android:layout_marginTop="@dimen/_5ssp"/>
+
+        <TextView
+            android:id="@+id/saveBtn"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_40sdp"
+            android:gravity="center"
+            android:textSize="@dimen/_14ssp"
+            android:fontFamily="@font/jostbold"
+            android:textColor="@color/txt_white"
+            android:background="@drawable/continue_bt"
+            android:layout_margin="@dimen/_24sdp"
+            android:text="@string/save"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:id="@+id/progress_Bar_Menu"
+            android:background="#60000000"
+            android:elevation="@dimen/_4sdp"
+            android:visibility="gone"
+            android:layout_height="match_parent">
+
+
+
+                <ProgressBar
+                    android:id="@+id/progress_Bar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:minWidth="50dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:background="@drawable/bg_card"
+                    android:padding="@dimen/_10ssp"
+                    android:indeterminateDrawable="@drawable/progress_bg"
+                    android:layout_centerInParent="true"
+                    android:minHeight="50dp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

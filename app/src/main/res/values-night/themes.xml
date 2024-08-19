@@ -1,0 +1,39 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Svaggy" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <item name="android:statusBarColor">@color/screen_bg</item>
+        <item name="android:windowLightStatusBar">true</item>
+        //fix double splash screen
+<!--        <item name="android:windowSplashscreenContent" tools:targetApi="26">@null</item>-->
+<!--        <item name="android:windowSplashScreenBackground" tools:targetApi="31">@null</item>-->
+<!--        <item name="android:windowSplashScreenBrandingImage" tools:targetApi="31">@null</item>-->
+    </style>
+
+
+
+    <style name="Theme.RemoveSplashScreenTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@null</item>
+    </style>
+
+
+
+        <style name="CustomDialogTheme" parent="Theme.AppCompat.Light.NoActionBar">
+            <item name="android:windowBackground">@android:color/transparent</item>
+            <item name="android:windowIsTranslucent">true</item>
+            <item name="android:windowNoTitle">true</item>
+            <item name="android:windowFullscreen">true</item>
+            <item name="android:statusBarColor">@android:color/transparent</item>
+        </style>
+
+    <style name="customDialogTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+    </style>
+
+
+</resources>

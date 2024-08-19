@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/txt_white"
+    tools:context=".ui.screens.login.ForgotPassEmail">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_back"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/email"
+        android:textSize="@dimen/_16ssp"
+        android:textColor="@color/txt_black"
+        android:fontFamily="@font/jostregular"
+        android:layout_marginStart="@dimen/dp24"
+        android:layout_marginTop="@dimen/dp18"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+    <EditText
+        android:id="@+id/enter_email_et"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_40sdp"
+        android:background="@drawable/radius_black"
+        android:paddingStart="@dimen/_12sdp"
+        android:paddingTop="@dimen/dp8"
+        android:paddingEnd="@dimen/_12sdp"
+        android:paddingBottom="@dimen/dp8"
+        android:text="@string/enter_email"
+        android:layout_marginTop="@dimen/dp8"
+        android:layout_marginEnd="@dimen/dp24"
+        android:textColor="@color/txt_gray"
+        android:textSize="@dimen/_14ssp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/textView8"
+        app:layout_constraintTop_toBottomOf="@+id/textView8"
+        android:autofillHints="Enter Email"
+        android:inputType="textEmailAddress"
+        tools:ignore="LabelFor" />
+
+    <TextView
+        android:id="@+id/send_otp_bt"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginStart="@dimen/dp24"
+        android:layout_marginEnd="@dimen/dp24"
+        android:background="@drawable/continue_bt"
+        android:fontFamily="@font/jostbold"
+        android:gravity="center"
+        android:text="@string/continue_txt"
+        android:layout_marginBottom="@dimen/_39sdp"
+        android:textAlignment="center"
+        android:textColor="@color/txt_white"
+        android:textSize="@dimen/_16ssp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="@dimen/dp20"
+        android:layout_marginBottom="@dimen/_8sdp"
+        android:src="@drawable/home_indicator_black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:contentDescription="@string/indicator_image" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

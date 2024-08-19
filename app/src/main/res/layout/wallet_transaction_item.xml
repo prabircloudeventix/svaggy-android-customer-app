@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="@dimen/_4sdp"
+        android:padding="@dimen/_15sdp"
+        android:layout_margin="@dimen/_10sdp"
+        android:background="@drawable/curve_primary_8dp"
+        android:backgroundTint="@color/white">
+
+        <TextView
+            android:id="@+id/txtTxnType"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Added to Wallet"
+            style="@style/textViewBlack16SpBold"
+            android:layout_marginEnd="@dimen/_10sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/txtTxnAmount"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txtTxnDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="24 March 2023"
+            style="@style/textViewPrimary14Spmedium"
+            android:textColor="@color/sub_txt_gray"
+            android:layout_marginTop="@dimen/_10sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtTxnType" />
+
+        <TextView
+            android:id="@+id/txtTxnAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+ CZK 346"
+            style="@style/textViewBlack16SpBold"
+            android:textColor="@color/green_clr"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/txtTxnType"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

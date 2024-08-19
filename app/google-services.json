@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "21262124450",
+    "project_id": "svaggy-14d77",
+    "storage_bucket": "svaggy-14d77.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:21262124450:android:2958c4a8472b2fd6f55efb",
+        "android_client_info": {
+          "package_name": "com.svaggy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "21262124450-bk4aq21nq1q6sg8ubebq0kj0g4q5eij3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.svaggy",
+            "certificate_hash": "74bef17f84485abe6ee3d34d2906b15da9efb876"
+          }
+        },
+        {
+          "client_id": "21262124450-qahsm268gvk3kmij3vneguuea8c8nvqp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDuwL-dZLSNaB8h9dZlWN1BGUpEFq333yY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "21262124450-qahsm268gvk3kmij3vneguuea8c8nvqp.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "21262124450-o60ll34th6qulruk4bttmfsoi3hmgn3d.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.svaggy"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

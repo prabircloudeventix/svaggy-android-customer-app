@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/screen_bg">
+
+    <TextView
+        android:id="@+id/txtFirstName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="First Name"
+        android:textSize="@dimen/sp16"
+        android:textColor="@color/txt_black"
+        android:fontFamily="@font/jostregular"
+        android:layout_marginTop="@dimen/dp12"
+        android:layout_marginStart="@dimen/dp24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/edtFirstName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/radius_black"
+        android:padding="@dimen/_12sdp"
+        android:hint="Enter First Name"
+        android:paddingBottom="@dimen/dp8"
+        android:layout_marginTop="@dimen/dp8"
+        android:layout_marginEnd="@dimen/dp24"
+        android:textColor="@color/txt_gray"
+        android:textSize="@dimen/sp14"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/txtFirstName"
+        app:layout_constraintTop_toBottomOf="@+id/txtFirstName" />
+
+    <TextView
+        android:id="@+id/txtLastName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/jostregular"
+        android:text="Last Name"
+        android:layout_marginTop="@dimen/dp20"
+        android:textColor="@color/txt_black"
+        android:textSize="@dimen/sp16"
+        app:layout_constraintStart_toStartOf="@+id/edtFirstName"
+        app:layout_constraintTop_toBottomOf="@+id/edtFirstName" />
+
+    <EditText
+        android:id="@+id/edtLastName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/radius_black"
+        android:padding="@dimen/_12sdp"
+        android:layout_marginEnd="@dimen/dp24"
+        android:hint="Enter Last Name"
+        android:layout_marginTop="@dimen/dp8"
+        android:textColor="@color/txt_gray"
+        android:textSize="@dimen/sp14"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/txtFirstName"
+        app:layout_constraintTop_toBottomOf="@+id/txtLastName" />
+
+    <TextView
+        android:id="@+id/txtEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Email Address"
+        android:fontFamily="@font/jostregular"
+        android:textColor="@color/txt_black"
+        android:textSize="@dimen/sp16"
+        android:layout_marginTop="@dimen/dp20"
+        app:layout_constraintStart_toStartOf="@+id/edtLastName"
+        app:layout_constraintTop_toBottomOf="@+id/edtLastName" />
+
+    <TextView
+        android:id="@+id/edtEmail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/radius_black"
+        android:padding="@dimen/_12sdp"
+        android:layout_marginEnd="@dimen/dp24"
+        android:layout_marginTop="@dimen/dp8"
+        android:textColor="@color/txt_gray"
+        android:textSize="@dimen/sp14"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/txtFirstName"
+        app:layout_constraintTop_toBottomOf="@+id/txtEmail"
+        android:hint="@string/enter_email_address"
+        android:autofillHints="@string/enter_email_address" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/edit"
+        style="@style/textViewPrimary14Spmedium"
+        android:layout_marginEnd="@dimen/_12sdp"
+        app:layout_constraintTop_toTopOf="@+id/edtEmail"
+        app:layout_constraintBottom_toBottomOf="@+id/edtEmail"
+        app:layout_constraintEnd_toEndOf="@+id/edtEmail"/>
+    
+    <TextView
+        android:id="@+id/txtMobile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/jostregular"
+        android:text="Mobile Number"
+        android:textColor="@color/txt_black"
+        android:layout_marginTop="@dimen/dp20"
+        android:textSize="@dimen/sp16"
+        app:layout_constraintStart_toStartOf="@+id/edtLastName"
+        app:layout_constraintTop_toBottomOf="@+id/edtEmail" />
+
+    <TextView
+        android:id="@+id/edtMobile"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/radius_black"
+        android:padding="@dimen/_12sdp"
+        android:layout_marginEnd="@dimen/dp24"
+        android:hint="@string/enter_mobile_number"
+        android:layout_marginTop="@dimen/dp8"
+        android:textColor="@color/txt_gray"
+        android:textSize="@dimen/sp14"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/txtFirstName"
+        app:layout_constraintTop_toBottomOf="@+id/txtMobile" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/edit"
+        style="@style/textViewPrimary14Spmedium"
+        android:layout_marginEnd="@dimen/_12sdp"
+        app:layout_constraintTop_toTopOf="@+id/edtMobile"
+        app:layout_constraintBottom_toBottomOf="@+id/edtMobile"
+        app:layout_constraintEnd_toEndOf="@+id/edtMobile"/>
+
+    
+    <TextView
+        android:id="@+id/btnSaveChange"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_margin="@dimen/_24sdp"
+        android:background="@drawable/continue_bt"
+        android:fontFamily="@font/jostbold"
+        android:gravity="center"
+        android:text="@string/save_changes"
+        android:layout_marginTop="@dimen/dp30"
+        android:textAlignment="center"
+        android:textColor="@color/txt_white"
+        android:textSize="@dimen/sp16"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

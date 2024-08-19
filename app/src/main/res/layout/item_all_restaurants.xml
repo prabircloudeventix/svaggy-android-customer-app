@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/restaurant"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:cardCornerRadius="@dimen/_12sdp"
+        app:cardElevation="0dp"
+        android:layout_margin="@dimen/_8sdp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imgRestaurant"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_140sdp"
+                android:contentDescription="@string/all_restaurants_image"
+                android:scaleType="fitXY"
+                android:src="@drawable/resturantsimage"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/currently_unavailable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/currently_unavailable"
+                android:textColor="@color/white"
+                android:padding="8dp"
+                android:background="@drawable/curve_unavailable_bg"
+                app:layout_constraintStart_toStartOf="@id/imgRestaurant"
+                app:layout_constraintTop_toTopOf="@id/imgRestaurant"
+                app:layout_constraintBottom_toBottomOf="@id/imgRestaurant"
+                app:layout_constraintEnd_toEndOf="@id/imgRestaurant"
+                android:fontFamily="@font/jostbold"
+                android:textSize="14sp"
+                />
+
+            <ImageView
+                android:id="@+id/isFeatured"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_featured_new"
+                android:visibility="invisible"
+                android:layout_marginTop="20dp"
+                app:layout_constraintTop_toTopOf="@id/imgRestaurant"
+                app:layout_constraintStart_toStartOf="@id/imgRestaurant"
+                />
+
+            <ImageView
+                android:id="@+id/isRushMode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_rush_new"
+                android:visibility="invisible"
+                android:layout_marginTop="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintTop_toTopOf="parent"
+                android:background="@drawable/bg_shadow"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="@id/imgRestaurant"
+                >
+
+
+                <TextView
+                    android:id="@+id/txtFlatDeal"
+                    style="@style/textViewStyle16Sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_12sdp"
+                    android:layout_marginEnd="@dimen/_12sdp"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    tools:text="FLAT DEAL"
+                    android:text="@string/flat_deal"
+                    android:textColor="@color/white"
+                    android:visibility="invisible"
+                    app:layout_constraintBottom_toTopOf="@id/txtPercentOff"
+                    app:layout_constraintStart_toStartOf="parent"
+                    />
+
+                <TextView
+                    android:id="@+id/txtPercentOff"
+                    style="@style/textViewBlack16SpBold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_12sdp"
+                    android:layout_marginEnd="@dimen/_12sdp"
+                    android:maxLines="1"
+                    android:visibility="invisible"
+                    android:textSize="@dimen/_15sdp"
+                    android:textColor="@color/white"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toTopOf="@id/txtSelectedDishes"
+
+                    />
+
+                <TextView
+                    android:id="@+id/txtSelectedDishes"
+                    style="@style/textViewStyle16Sp"
+                    android:layout_width="wrap_content"
+                    android:visibility="invisible"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_12sdp"
+                    android:layout_marginEnd="@dimen/_12sdp"
+                    tools:text="on selected dishes"
+                    android:text="@string/on_selected_dishes"
+                    android:textColor="@color/white"
+                    android:layout_marginBottom="10dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    />
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+            <TextView
+                android:id="@+id/txtRestaurantName"
+                style="@style/textViewBlack16SpBold"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp13"
+                android:layout_marginTop="@dimen/dp15"
+                tools:text="Anchor &amp; James"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/tvRating"
+                app:layout_constraintTop_toBottomOf="@+id/imgRestaurant" />
+
+
+
+            <TextView
+                android:id="@+id/txtCuisines"
+                style="@style/textViewStyle14Sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp13"
+                android:layout_marginEnd="@dimen/dp13"
+                android:text="3 Miles away"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/txtRestaurantName"
+                app:layout_constraintTop_toBottomOf="@+id/txtRestaurantName"/>
+
+            <TextView
+                android:id="@+id/tvRating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dp13"
+                android:background="@drawable/rating_green"
+                android:gravity="center_vertical"
+                android:textSize="@dimen/sp12"
+                android:padding="4dp"
+                android:fontFamily="@font/jostmedium"
+                android:text="4.5"
+                android:textColor="@color/white"
+                android:drawableEnd="@drawable/star"
+                app:layout_constraintTop_toTopOf="@+id/txtRestaurantName"
+                app:layout_constraintBottom_toBottomOf="@+id/txtRestaurantName"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:ignore="RtlSymmetry" />
+
+
+            <ImageView
+                android:id="@+id/imageView22"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp16"
+                android:contentDescription="@string/hori_line"
+                android:src="@drawable/ic_line_space"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtCuisines" />
+
+
+            <ImageView
+                android:id="@+id/imageView23"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_gray_loc"
+                app:layout_constraintBottom_toBottomOf="@+id/tvDistance"
+                app:layout_constraintStart_toStartOf="@+id/txtCuisines"
+                app:layout_constraintTop_toTopOf="@+id/tvDistance" />
+
+            <TextView
+                android:id="@+id/tvDistance"
+                style="@style/textViewGray12Sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_3sdp"
+                android:layout_marginTop="@dimen/dp13"
+                android:layout_marginBottom="@dimen/dp15"
+                android:text="3 Miles"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imageView23"
+                app:layout_constraintTop_toBottomOf="@+id/imageView22" />
+
+
+
+            <ImageView
+                android:id="@+id/imageView24"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/delivery_time"
+                app:layout_constraintStart_toStartOf="@id/guideline"
+                app:layout_constraintBottom_toBottomOf="@+id/tvDistance"
+                app:layout_constraintTop_toTopOf="@+id/tvDistance" />
+
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline"
+                android:layout_width="1dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.35"/>
+
+            <TextView
+                android:id="@+id/tvDeliveryTime"
+                style="@style/textViewGray12Sp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_3sdp"
+                android:text="30-45 mins"
+                android:gravity="start"
+                android:maxLines="1"
+                android:ellipsize="end"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView24"
+                app:layout_constraintEnd_toStartOf="@+id/imageView25"
+                app:layout_constraintStart_toEndOf="@+id/imageView24"
+                app:layout_constraintTop_toTopOf="@+id/imageView24" />
+
+            <ImageView
+                android:id="@+id/imageView25"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_check"
+                android:layout_marginEnd="@dimen/_3sdp"
+                app:layout_constraintBottom_toBottomOf="@+id/getDeliveryType"
+                app:layout_constraintEnd_toStartOf="@id/getDeliveryType"
+               />
+
+            <TextView
+                android:id="@+id/getDeliveryType"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                style="@style/textViewGray12Sp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="Delivery"
+                android:gravity="start"
+                app:layout_constraintEnd_toEndOf="@id/tvRating"
+                android:layout_marginStart="@dimen/_3sdp"
+                app:layout_constraintTop_toTopOf="@id/imageView24"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView24"
+                />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+</layout>

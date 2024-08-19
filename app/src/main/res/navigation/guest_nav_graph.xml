@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/guest_nav_graph"
+    app:startDestination="@id/guestHomeFragment">
+
+    <fragment
+        android:id="@+id/guestHomeFragment"
+        android:name="com.svaggy.ui.activities.guestuser.GuestHomeFragment"
+        android:label="GuestHomeFragment" >
+
+        <action
+            android:id="@+id/action_guestHomeFragment_to_restaurantMenuScreen2"
+            app:destination="@id/restaurantMenuScreen2" />
+    </fragment>
+    <fragment
+        android:id="@+id/guestCartFragment"
+        android:name="com.svaggy.ui.activities.guestuser.GuestCartFragment"
+        android:label="fragment_guest_cart"
+        tools:layout="@layout/fragment_guest_cart" />
+    <fragment
+        android:id="@+id/restaurantMenuScreen2"
+        android:name="com.svaggy.ui.fragments.home.screens.RestaurantMenuScreen"
+        android:label="RestaurantMenuScreen" >
+        <action
+            android:id="@+id/action_restaurantMenuScreen2_to_guestCartFragment"
+            app:destination="@id/guestCartFragment" />
+    </fragment>
+</navigation>

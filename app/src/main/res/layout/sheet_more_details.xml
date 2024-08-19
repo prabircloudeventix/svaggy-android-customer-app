@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/white_curve_twoside">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardDetail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_24sdp"
+        android:layout_marginTop="@dimen/_24sdp"
+        android:layout_marginEnd="@dimen/_24sdp"
+        app:cardCornerRadius="@dimen/dp10"
+        app:cardElevation="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imgDishMoreDetail"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_134sdp"
+            android:layout_gravity="center_vertical"
+            android:scaleType="centerCrop"
+            android:src="@drawable/veg_food"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.cardview.widget.CardView>
+
+    <ImageView
+        android:id="@+id/imgCancel"
+        android:layout_width="@dimen/_25sdp"
+        android:layout_height="@dimen/_25sdp"
+        android:background="@drawable/white_curve_sixdp"
+        android:padding="@dimen/_4sdp"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:layout_marginEnd="@dimen/_12sdp"
+        android:src="@drawable/cancel_icon"
+        app:layout_constraintEnd_toEndOf="@+id/cardDetail"
+        app:layout_constraintTop_toTopOf="@+id/cardDetail" />
+
+    <ImageView
+        android:id="@+id/imgDishTypeMoreDetail"
+        android:layout_width="@dimen/_15sdp"
+        android:layout_height="@dimen/_15sdp"
+        android:layout_marginStart="@dimen/_24sdp"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:src="@drawable/veg_icon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardDetail" />
+
+    <TextView
+        android:id="@+id/txtDishNameMoreDetail"
+        style="@style/textViewBlack16SpBold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_14sdp"
+        android:text="Dal Makhani"
+        app:layout_constraintStart_toStartOf="@+id/imgDishTypeMoreDetail"
+        app:layout_constraintTop_toBottomOf="@+id/imgDishTypeMoreDetail" />
+
+    <TextView
+        android:id="@+id/txtDishPriceMoreDetail"
+        style="@style/textViewStyle16Sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_6sdp"
+        android:text="CZK 20"
+        app:layout_constraintStart_toStartOf="@+id/txtDishNameMoreDetail"
+        app:layout_constraintTop_toBottomOf="@+id/txtDishNameMoreDetail" />
+
+    <TextView
+        android:id="@+id/txtDishDescMoreDetail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_marginEnd="@dimen/_24sdp"
+        android:text="Medium Spicy, Serves 1, Most loved and sought after dal. Lentils slowly simmered in a very aromatic buttery, creamy tomato sauce with 2 missi roti."
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/txtDishPriceMoreDetail"
+        app:layout_constraintTop_toBottomOf="@+id/txtDishPriceMoreDetail" />
+
+    <TextView
+        android:id="@+id/txtAddCartMoreDetail"
+        style="@style/textViewBlack14SpBold"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_38sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginBottom="@dimen/_20sdp"
+        android:background="@drawable/curve_primary_8dp"
+        android:gravity="end|center"
+        android:paddingEnd="@dimen/_12sdp"
+        android:text="Add To Cart"
+        android:textAlignment="textEnd"
+        android:textColor="@color/white"
+        android:visibility="visible"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/txtDishDescMoreDetail"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/txtDishDescMoreDetail"
+        app:layout_constraintTop_toBottomOf="@+id/txtDishDescMoreDetail"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="RtlCompat,RtlSymmetry" />
+
+    <TextView
+        android:id="@+id/txtItemPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:text="CZK 30"
+        android:gravity="center"
+        android:textColor="@color/white"
+        style="@style/textViewBlack14SpBold"
+        android:layout_marginStart="@dimen/_12sdp"
+        app:layout_constraintBottom_toBottomOf="@+id/txtAddCartMoreDetail"
+        app:layout_constraintStart_toStartOf="@+id/txtAddCartMoreDetail"
+        app:layout_constraintTop_toTopOf="@+id/txtAddCartMoreDetail" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clAddQtyAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp40"
+        android:layout_marginStart="@dimen/_24sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginBottom="@dimen/_20sdp"
+        android:background="@drawable/qty_add_bg"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtDishDescMoreDetail">
+
+        <ImageView
+            android:id="@+id/imgMinus"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:paddingStart="@dimen/_8sdp"
+            android:paddingEnd="@dimen/_8sdp"
+            android:src="@drawable/sub_icon"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/txt_item_count"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txt_item_count"
+            style="@style/textViewPrimary14Spmedium"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="@+id/imgAdd"
+            app:layout_constraintEnd_toStartOf="@+id/imgAdd"
+            app:layout_constraintStart_toEndOf="@+id/imgAdd"
+            app:layout_constraintTop_toTopOf="@+id/imgAdd" />
+
+        <ImageView
+            android:id="@+id/imgAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:paddingStart="@dimen/_8sdp"
+            android:paddingEnd="@dimen/_8sdp"
+            android:src="@drawable/add_icon"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/txt_item_count"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txtNotAvailable"
+            style="@style/textViewGray12Sp"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_24sdp"
+            android:gravity="center"
+            android:paddingStart="@dimen/_7ssp"
+            android:paddingEnd="@dimen/_7ssp"
+            android:text="Not Available"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/imgAdd"
+            app:layout_constraintEnd_toStartOf="@+id/imgAdd"
+            app:layout_constraintStart_toEndOf="@+id/imgAdd"
+            app:layout_constraintTop_toTopOf="@+id/imgAdd" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/btQtyConfirm"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dp40"
+        android:text="@string/confirm"
+        style="@style/textViewBlack14SpBold"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:visibility="gone"
+        android:layout_marginStart="@dimen/_12sdp"
+        android:layout_marginEnd="@dimen/_24sdp"
+        android:background="@drawable/curve_primary_8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/clAddQtyAdd"
+        app:layout_constraintTop_toBottomOf="@+id/txtDishDescMoreDetail" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_height="wrap_content">
+
+
+
+
+
+
+            <ImageView
+                android:id="@+id/imgDishType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/veg_icon"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/txtDishName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:text="Special Noodles"
+                android:textColor="@color/black"
+                android:fontFamily="@font/jostmedium"
+                android:textSize="@dimen/sp16"
+                app:layout_constraintStart_toStartOf="@+id/imgDishType"
+                app:layout_constraintTop_toBottomOf="@+id/imgDishType" />
+
+            <TextView
+                android:id="@+id/txtQuantityPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:text="1 * CZK 40"
+                style="@style/textViewStyle14SpSubText"
+                app:layout_constraintStart_toStartOf="@+id/txtDishName"
+                app:layout_constraintTop_toBottomOf="@+id/txtDishName" />
+
+            <TextView
+                android:id="@+id/txtDishPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/jostbold"
+                android:text="CZK 40"
+                android:textColor="@color/txt_black"
+                android:textSize="@dimen/sp14"
+                app:layout_constraintBottom_toBottomOf="@+id/txtDishName"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/txtDishName" />
+
+            <TextView
+                android:id="@+id/txtDishDesc"
+                android:layout_width="0dp"
+                android:textSize="14sp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:fontFamily="@font/jostregular"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/txtDishName"
+                app:layout_constraintTop_toBottomOf="@+id/txtQuantityPrice" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

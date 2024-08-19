@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:overScrollMode="never">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/white_curve_twoside">
+
+        <TextView
+            android:id="@+id/txtcustomizeName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:layout_marginTop="@dimen/_20ssp"
+            android:layout_marginStart="@dimen/_24sdp"
+            style="@style/textViewBlack16SpBold"
+            app:layout_constraintEnd_toStartOf="@id/imgCancel"
+            android:text="@string/customize_dal_makhani"
+            app:layout_constraintBottom_toBottomOf="@+id/imgCancel"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/imgCancel" />
+
+        <ImageView
+            android:id="@+id/imgCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/_20sdp"
+            android:paddingEnd="@dimen/_24sdp"
+            android:paddingStart="@dimen/_24sdp"
+            android:paddingBottom="@dimen/_5ssp"
+            android:src="@drawable/cancel_icon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/divider8"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:background="@color/stroke_colr"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imgCancel" />
+
+        <TextView
+            android:id="@+id/itemPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_24sdp"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:text="@string/czk_12"
+            style="@style/textViewBlack14SpBold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/divider8" />
+
+        <TextView
+            android:id="@+id/txtCustomizeDesc"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_6sdp"
+            android:layout_marginEnd="@dimen/_24sdp"
+            style="@style/textViewStyle14Sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/itemPrice"
+            app:layout_constraintTop_toBottomOf="@+id/itemPrice" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerCustomizeItems"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:layout_marginStart="@dimen/_24sdp"
+            android:layout_marginEnd="@dimen/_24sdp"
+            android:overScrollMode="never"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtCustomizeDesc"
+            tools:itemCount="3"
+            tools:listitem="@layout/item_customize" />
+
+
+
+        <TextView
+            android:id="@+id/addToCartPopBt"
+            style="@style/textViewBlack14SpBold"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_38sdp"
+            android:layout_marginStart="@dimen/_24sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_24sdp"
+            android:layout_marginBottom="@dimen/_20sdp"
+            android:background="@drawable/curve_primary_8dp"
+            android:gravity="end|center"
+            android:paddingEnd="@dimen/_12sdp"
+            android:text="@string/add_to_cart"
+            android:textAlignment="textEnd"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/recyclerCustomizeItems"
+            tools:ignore="RtlCompat" />
+
+        <TextView
+            android:id="@+id/txtTotalAddonsPrice"
+            style="@style/textViewBlack14SpBold"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginStart="@dimen/_12sdp"
+            android:gravity="center"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="@+id/addToCartPopBt"
+            app:layout_constraintStart_toStartOf="@+id/addToCartPopBt"
+            app:layout_constraintTop_toTopOf="@+id/addToCartPopBt" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</layout>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:background="@drawable/white_curve_4side"
+    android:id="@+id/checkLayout"
+        android:elevation="1dp"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+       android:layout_marginStart="@dimen/_24sdp"
+    android:layout_marginEnd="@dimen/_24sdp"
+    android:layout_marginTop="@dimen/_24sdp"
+      >
+
+
+    <RadioButton
+        android:id="@+id/checkBox"
+        android:layout_width="@dimen/_24sdp"
+        android:layout_height="@dimen/_24sdp"
+        android:layout_marginStart="24dp"
+        android:buttonTint="#969696"
+        android:checked="false"
+        android:clickable="false"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/getReason"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="top"
+            android:layout_marginStart="5dp"
+            app:layout_constraintStart_toEndOf="@id/checkBox"
+            app:layout_constraintTop_toTopOf="@id/checkBox"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="I have moved to an area where this app is not available or relevant"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+

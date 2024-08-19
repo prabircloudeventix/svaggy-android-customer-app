@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/email_dn_curve"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/backButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:src="@drawable/arrow_back"
+            android:layout_marginTop="@dimen/dp20"
+            android:layout_marginBottom="@dimen/dp20"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Change Phone Number"
+            style="@style/textViewBlack18SpBold"
+            android:layout_marginStart="@dimen/dp10"
+            app:layout_constraintBottom_toBottomOf="@+id/backButton"
+            app:layout_constraintStart_toEndOf="@+id/backButton"
+            app:layout_constraintTop_toTopOf="@+id/backButton" />
+
+        <TextView
+            android:id="@+id/txtHead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp24"
+            android:fontFamily="@font/jostregular"
+            android:text="Edit Phone Number"
+            android:textColor="@color/txt_black"
+            android:textSize="@dimen/_14ssp"
+            app:layout_constraintTop_toBottomOf="@id/title_tv"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+
+        <EditText
+            android:id="@+id/edtPhone"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp8"
+            android:layout_marginEnd="@dimen/dp24"
+            android:background="@drawable/radius_black"
+            android:inputType="number"
+            android:paddingStart="@dimen/_12sdp"
+            android:paddingTop="@dimen/dp8"
+            tools:text="rishav.think@gmail.com"
+            android:layout_marginBottom="@dimen/_29sdp"
+            android:padding="@dimen/_12sdp"
+            android:hint="@string/enter_email"
+            android:textColor="@color/txt_gray"
+            android:textSize="@dimen/_12ssp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/txtHead"
+            app:layout_constraintTop_toBottomOf="@+id/txtHead"
+            android:autofillHints="" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/consMobile"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginEnd="@dimen/dp24"
+            android:layout_marginBottom="@dimen/_23sdp"
+            android:background="@drawable/radius_black"
+            android:padding="@dimen/dp5"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/txtHead"
+            app:layout_constraintTop_toBottomOf="@+id/txtHead">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout3"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:padding="@dimen/dp5"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/etPhoneNumber"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.svaggy.utils.countrycodepicker.CountryCodePicker
+                    android:id="@+id/ccp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp40"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:id="@+id/divider3"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="?android:attr/listDivider"
+                app:layout_constraintEnd_toEndOf="@+id/constraintLayout3"
+                app:layout_constraintStart_toEndOf="@+id/constraintLayout3"
+                tools:layout_editor_absoluteY="5dp" />
+
+            <EditText
+                android:id="@+id/etPhoneNumber"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:autofillHints="phone"
+                android:background="@color/transparent"
+                android:fontFamily="@font/jostregular"
+                android:hint="@string/phone_number"
+                android:imeOptions="flagForceAscii"
+                android:inputType="phone"
+                android:textColorHint="@color/sub_txt_gray"
+                android:paddingStart="@dimen/_8ssp"
+                android:text=""
+                android:textColor="@color/black"
+                android:textCursorDrawable="@drawable/text_cursor"
+                android:textSize="@dimen/_14ssp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/divider3"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:id="@+id/progress_Bar_Menu"
+        android:background="#60000000"
+        android:visibility="gone"
+        android:layout_height="match_parent">
+
+
+
+        <ProgressBar
+            android:id="@+id/progress_Bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:minWidth="50dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:background="@drawable/bg_card"
+            android:padding="@dimen/_10ssp"
+            android:indeterminateDrawable="@drawable/progress_bg"
+            android:layout_centerInParent="true"
+            android:minHeight="50dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <TextView
+        android:id="@+id/btnSendOtp"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_margin="@dimen/_24sdp"
+        android:background="@drawable/continue_bt"
+        android:fontFamily="@font/jostbold"
+        android:gravity="center"
+        android:text="@string/send_otp"
+        android:textAlignment="center"
+        android:textColor="@color/txt_white"
+        android:textSize="@dimen/_14ssp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/_20sdp"
+    android:layout_margin="@dimen/_20sdp"
+    android:background="@drawable/white_curve_4side"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/imgIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_alert_info"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="@id/txtMessage"
+        app:layout_constraintEnd_toEndOf="@id/txtMessage"/>
+
+    <TextView
+        android:id="@+id/txtMessage"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        style="@style/textViewBlack18SpBold"
+        android:fontFamily="@font/jostmedium"
+        android:textAlignment="center"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imgIcon"/>
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#E5E9EB"
+        android:layout_margin="@dimen/_20sdp"
+        app:layout_constraintTop_toBottomOf="@id/txtMessage"/>
+
+    <TextView
+        android:id="@+id/btnDialogNegative"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dp40"
+        style="@style/textViewBlack16SpBold"
+        android:text="NO"
+        android:textColor="@color/primaryColor"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/dp20"
+        android:layout_marginBottom="@dimen/_20sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnDialogPositive"
+        app:layout_constraintTop_toBottomOf="@+id/view"/>
+
+    <TextView
+        android:id="@+id/btnDialogPositive"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dp40"
+        style="@style/textViewBlack16SpBold"
+        android:text="@string/trackorder"
+        android:gravity="center"
+        android:background="@drawable/continue_bt"
+        android:textColor="@color/white"
+        android:layout_marginTop="@dimen/dp20"
+        android:layout_marginBottom="@dimen/_20sdp"
+        app:layout_constraintStart_toEndOf="@+id/btnDialogNegative"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view"/>
+
+    <TextView
+        android:id="@+id/txtNote"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="You want to cancel your order"
+        style="@style/textViewStyle16Sp"
+        android:textColor="@color/sub_txt_gray"
+        android:fontFamily="@font/jostmedium"
+        android:gravity="center_vertical"
+        android:drawableStart="@drawable/ic_info"
+        android:drawablePadding="@dimen/_5sdp"
+        android:drawableTint="@color/primaryColor"
+        android:layout_marginTop="@dimen/_15sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnDialogNegative"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

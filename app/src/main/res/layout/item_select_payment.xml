@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="@dimen/_4sdp"
+        android:layout_marginBottom="@dimen/_7sdp"
+        android:layout_marginStart="@dimen/_24sdp"
+        android:layout_marginEnd="@dimen/_24sdp">
+
+    <ImageView
+        android:id="@+id/cardImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/logos_visa"
+        app:layout_constraintBottom_toBottomOf="@+id/cardNameTv"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/cardNameTv" />
+
+    <TextView
+        android:id="@+id/cardNameTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_14sdp"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:text="Visa Card"
+        style="@style/textViewStyle16Sp"
+        app:layout_constraintStart_toEndOf="@+id/cardImage"
+        app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/cardNumber"
+            style="@style/textViewStyle14Sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:text="**** - **** - **** - 1315"
+            app:layout_constraintStart_toStartOf="@+id/cardNameTv"
+            app:layout_constraintTop_toBottomOf="@+id/cardNameTv" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/screen_bg">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/txtOrderFor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Who are you ordering for?"
+            style="@style/textViewBlack16SpBold"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginStart="@dimen/dp24"
+            android:layout_marginEnd="@dimen/_12sdp"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <RadioGroup
+            android:id="@+id/radioSelect"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/txtOrderFor">
+
+            <RadioButton
+                android:id="@+id/radioSelf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Myself"
+                android:checked="true"
+                android:buttonTint="@color/primaryColor"
+                android:layout_marginStart="@dimen/dp24"
+                style="@style/textViewBlack14Sp"/>
+
+            <RadioButton
+                android:id="@+id/radioSomeone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Someone Else"
+                android:buttonTint="@color/primaryColor"
+                android:layout_marginStart="@dimen/dp24"
+                style="@style/textViewBlack14Sp"/>
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/txtName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Name"
+            style="@style/textViewBlack16SpBold"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:layout_marginStart="@dimen/dp24"
+            android:layout_marginEnd="@dimen/_12sdp"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@+id/radioSelect"/>
+
+        <EditText
+            android:id="@+id/edtName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp8"
+            android:layout_marginEnd="@dimen/dp24"
+            android:background="@drawable/radius_black"
+            android:padding="@dimen/_12sdp"
+            android:layout_marginBottom="@dimen/_29sdp"
+            android:hint="Enter Name"
+            android:textColor="@color/txt_gray"
+            android:textSize="@dimen/_12ssp"
+            android:visibility="gone"
+            android:textCursorDrawable="@drawable/text_cursor"
+            app:layout_constraintEnd_toStartOf="@+id/imgContacts"
+            app:layout_constraintStart_toStartOf="@+id/txtName"
+            app:layout_constraintTop_toBottomOf="@+id/txtName" />
+
+        <ImageView
+            android:id="@+id/imgContacts"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dp24"
+            android:padding="@dimen/_8sdp"
+            android:src="@drawable/ic_contact_list"
+            android:visibility="gone"
+            android:background="@drawable/radius_black"
+            app:layout_constraintTop_toTopOf="@id/edtName"
+            app:layout_constraintBottom_toBottomOf="@id/edtName"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:contentDescription="@string/notification" />
+
+        <TextView
+            android:id="@+id/txtPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Phone Number"
+            style="@style/textViewBlack16SpBold"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:layout_marginStart="@dimen/dp24"
+            android:layout_marginEnd="@dimen/_12sdp"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@+id/edtName"/>
+
+        <EditText
+            android:id="@+id/edtPhone"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp8"
+            android:layout_marginEnd="@dimen/dp24"
+            android:background="@drawable/radius_black"
+            android:padding="@dimen/_12sdp"
+            android:layout_marginBottom="@dimen/_29sdp"
+            android:hint="Enter Phone Number"
+            android:textColor="@color/txt_gray"
+            android:textSize="@dimen/_12ssp"
+            android:visibility="gone"
+            android:textCursorDrawable="@drawable/text_cursor"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/txtPhone"
+            app:layout_constraintTop_toBottomOf="@+id/txtPhone" />
+
+        <TextView
+            android:id="@+id/txtFlat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Flat / House Number / Building"
+            style="@style/textViewBlack16SpBold"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:layout_marginStart="@dimen/dp24"
+            android:layout_marginEnd="@dimen/dp24"
+            app:layout_constraintTop_toBottomOf="@+id/edtPhone"/>
+
+        <EditText
+            android:id="@+id/edtFlat"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp8"
+            android:layout_marginEnd="@dimen/dp24"
+            android:background="@drawable/radius_black"
+            android:padding="@dimen/_12sdp"
+            android:layout_marginBottom="@dimen/_29sdp"
+            android:hint="@string/apt_office_floor"
+            android:textColor="@color/txt_gray"
+            android:textSize="@dimen/_12ssp"
+            android:textCursorDrawable="@drawable/text_cursor"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/txtFlat"
+            app:layout_constraintTop_toBottomOf="@+id/txtFlat" />
+
+        <TextView
+            android:id="@+id/txtArea"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Area/Sector/Locality"
+            style="@style/textViewBlack16SpBold"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:layout_marginStart="@dimen/dp24"
+            android:layout_marginEnd="@dimen/dp24"
+            app:layout_constraintTop_toBottomOf="@+id/edtFlat"/>
+
+        <EditText
+            android:id="@+id/edtArea"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp8"
+            android:layout_marginEnd="@dimen/dp24"
+            android:background="@drawable/radius_black"
+            android:padding="@dimen/_12sdp"
+            android:layout_marginBottom="@dimen/_29sdp"
+            android:paddingEnd="@dimen/_12sdp"
+            android:paddingBottom="@dimen/dp8"
+            android:hint="@string/street_locality"
+            android:textColor="@color/txt_gray"
+            android:textSize="@dimen/_12ssp"
+            android:textCursorDrawable="@drawable/text_cursor"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/txtArea"
+            app:layout_constraintTop_toBottomOf="@+id/txtArea" />
+
+        <TextView
+            android:id="@+id/txtPostalCode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Postal Code"
+            style="@style/textViewBlack16SpBold"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:layout_marginStart="@dimen/dp24"
+            android:layout_marginEnd="@dimen/dp24"
+            app:layout_constraintTop_toBottomOf="@+id/edtArea"/>
+
+        <EditText
+            android:id="@+id/edtPostalCode"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp8"
+            android:layout_marginEnd="@dimen/dp24"
+            android:inputType="number"
+            android:background="@drawable/radius_black"
+            android:padding="@dimen/_12sdp"
+            android:layout_marginBottom="@dimen/_29sdp"
+            android:hint="Enter Postal Code"
+            android:textColor="@color/txt_gray"
+            android:textSize="@dimen/_12ssp"
+            android:textCursorDrawable="@drawable/text_cursor"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/txtPostalCode"
+            app:layout_constraintTop_toBottomOf="@+id/txtPostalCode" />
+
+        <TextView
+            android:id="@+id/txtCity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="City"
+            style="@style/textViewBlack16SpBold"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:layout_marginStart="@dimen/dp24"
+            android:layout_marginEnd="@dimen/dp24"
+            app:layout_constraintTop_toBottomOf="@+id/edtPostalCode"/>
+
+        <EditText
+            android:id="@+id/edtCity"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp8"
+            android:layout_marginEnd="@dimen/dp24"
+            android:background="@drawable/radius_black"
+            android:padding="@dimen/_12sdp"
+            android:layout_marginBottom="@dimen/_29sdp"
+            android:hint="Enter City"
+            android:textColor="@color/txt_gray"
+            android:textSize="@dimen/_12ssp"
+            android:textCursorDrawable="@drawable/text_cursor"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/txtCity"
+            app:layout_constraintTop_toBottomOf="@+id/txtCity" />
+
+        <TextView
+            android:id="@+id/txtType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Save As"
+            style="@style/textViewBlack16SpBold"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:layout_marginStart="@dimen/dp24"
+            android:layout_marginEnd="@dimen/dp24"
+            app:layout_constraintTop_toBottomOf="@+id/edtCity"/>
+
+        <TextView
+            android:id="@+id/edtHome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp8"
+            android:layout_marginEnd="@dimen/dp24"
+            android:background="@drawable/radius_black"
+            android:padding="@dimen/_12sdp"
+            android:layout_marginBottom="@dimen/_29sdp"
+            android:gravity="center"
+            android:text="Home"
+            android:textColor="@color/txt_gray"
+            android:textSize="@dimen/_12ssp"
+            app:layout_constraintStart_toStartOf="@+id/txtType"
+            app:layout_constraintTop_toBottomOf="@+id/txtType" />
+
+        <TextView
+            android:id="@+id/edtWork"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp8"
+            android:layout_marginEnd="@dimen/dp24"
+            android:layout_marginStart="@dimen/dp24"
+            android:background="@drawable/radius_black"
+            android:padding="@dimen/_12sdp"
+            android:layout_marginBottom="@dimen/_29sdp"
+            android:gravity="center"
+            android:text="Work"
+            android:textColor="@color/txt_gray"
+            android:textSize="@dimen/_12ssp"
+            app:layout_constraintStart_toEndOf="@id/edtHome"
+            app:layout_constraintTop_toBottomOf="@+id/txtType" />
+
+        <TextView
+            android:id="@+id/edtOther"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp8"
+            android:layout_marginEnd="@dimen/dp24"
+            android:layout_marginStart="@dimen/dp24"
+            android:background="@drawable/radius_black"
+            android:padding="@dimen/_12sdp"
+            android:layout_marginBottom="@dimen/_29sdp"
+            android:gravity="center"
+            android:text="Other"
+            android:textColor="@color/txt_gray"
+            android:textSize="@dimen/_12ssp"
+            app:layout_constraintStart_toEndOf="@id/edtWork"
+            app:layout_constraintTop_toBottomOf="@+id/txtType" />
+
+        <TextView
+            android:id="@+id/txtSaveLocation"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_margin="@dimen/_24sdp"
+            android:background="@drawable/continue_bt"
+            android:fontFamily="@font/jostbold"
+            android:gravity="center"
+            android:text="Save Location"
+            android:textAlignment="center"
+            android:textColor="@color/txt_white"
+            android:textSize="@dimen/_14ssp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edtOther"
+            app:layout_constraintBottom_toBottomOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

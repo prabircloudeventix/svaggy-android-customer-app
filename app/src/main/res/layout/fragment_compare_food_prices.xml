@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout13"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/email_dn_curve"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_24sdp"
+            android:layout_marginEnd="@dimen/_24sdp"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:layout_marginBottom="@dimen/_24sdp"
+            android:elevation="1dp"
+            android:background="@drawable/home_special_bg"
+            android:backgroundTint="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <EditText
+                android:id="@+id/txtSearch"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginStart="@dimen/_16sdp"
+                android:layout_marginEnd="@dimen/_16sdp"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:layout_marginBottom="@dimen/_12sdp"
+                android:autofillHints="Search Product"
+                android:background="@drawable/radius_black"
+                android:fontFamily="@font/jostregular"
+                android:gravity="center_vertical"
+                android:hint="@string/search_food"
+                android:inputType="text"
+                android:paddingStart="@dimen/_8sdp"
+                android:textColor="@color/txt_gray"
+                android:textColorHint="@color/txt_gray"
+                android:textSize="@dimen/sp16"
+                android:textCursorDrawable="@drawable/text_cursor"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                tools:ignore="RtlSymmetry"
+                android:drawablePadding="@dimen/_2sdp"
+                android:drawableTint="@color/txt_gray"
+                app:drawableStartCompat="@drawable/search_icon" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/txtShowingResult"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_24sdp"
+        android:fontFamily="@font/jostregular"
+        android:text="Showing results for "
+        android:textColor="@color/txt_black"
+        android:textSize="@dimen/sp18"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/sortBy"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/sortBy" />
+
+    <TextView
+        android:id="@+id/txtSearchTxt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Pizza"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/txtShowingResult"
+        app:layout_constraintEnd_toStartOf="@+id/sortBy"
+        app:layout_constraintStart_toEndOf="@+id/txtShowingResult"
+        app:layout_constraintTop_toTopOf="@+id/txtShowingResult" />
+
+    <TextView
+        android:id="@+id/sortBy"
+        style="@style/textViewStyle14Sp"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_32ssp"
+        android:layout_marginEnd="@dimen/_24sdp"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:background="@drawable/curve_stroke_four_dp"
+        android:gravity="center"
+        android:text="@string/sort_by"
+        android:drawablePadding="@dimen/_10ssp"
+        android:paddingStart="@dimen/_5ssp"
+        android:paddingEnd="@dimen/_5ssp"
+        android:visibility="invisible"
+        android:textColor="@color/sub_txt_gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout13"
+        app:drawableEndCompat="@drawable/show_down"
+        app:drawableTint="@color/black" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerCompare"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        tools:itemCount="2"
+        android:paddingStart="@dimen/_24sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sortBy"
+        tools:listitem="@layout/item_compare_food" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:id="@+id/progress_Bar_Menu"
+        android:background="#60000000"
+        android:visibility="gone"
+        android:layout_height="match_parent">
+
+
+
+        <ProgressBar
+            android:id="@+id/progress_Bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:minWidth="50dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:background="@drawable/bg_card"
+            android:padding="@dimen/_10ssp"
+            android:indeterminateDrawable="@drawable/progress_bg"
+            android:layout_centerInParent="true"
+            android:minHeight="50dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

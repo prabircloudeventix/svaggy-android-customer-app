@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/_20sdp"
+    android:layout_margin="@dimen/_20sdp"
+    android:background="@drawable/white_curve_4side"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <TextView
+        android:id="@+id/txtMessage"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/food_is_being_prepared"
+        style="@style/textViewBlack18SpBold"
+        android:fontFamily="@font/jostmedium"
+        android:textAlignment="center"
+        android:layout_marginTop="@dimen/_10sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textSize="@dimen/_15sdp"
+        android:textColor="#333333"
+       />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+420 3434 456 454"
+        android:textColor="@color/primaryColor"
+        app:layout_constraintTop_toBottomOf="@id/txtMessage"
+        app:layout_constraintStart_toStartOf="@id/txtMessage"
+        android:fontFamily="@font/jostbold"
+        android:layout_marginTop="@dimen/_10ssp"/>
+
+
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

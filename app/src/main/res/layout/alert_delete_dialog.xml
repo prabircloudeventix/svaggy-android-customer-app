@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/_20sdp"
+    android:layout_margin="@dimen/_20sdp"
+    android:background="@drawable/white_curve_4side"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/imgIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_alert_info"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/getMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/imgIcon"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textSize="14sp"
+        android:text="Are You Sure You Want Delete Account ?"
+        android:fontFamily="@font/jostmedium"
+        android:textColor="@color/black"
+        android:layout_marginTop="@dimen/_5ssp"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#E5E9EB"
+        android:layout_margin="@dimen/_20sdp"
+        app:layout_constraintTop_toBottomOf="@id/getMessage"/>
+
+    <TextView
+        android:id="@+id/btnDialogNegative"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dp40"
+        style="@style/textViewBlack16SpBold"
+        android:text="@string/no"
+        android:textColor="@color/primaryColor"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/dp20"
+        android:layout_marginBottom="@dimen/_20sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnDialogPositive"
+        app:layout_constraintTop_toBottomOf="@+id/view"/>
+
+    <TextView
+        android:id="@+id/btnDialogPositive"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dp40"
+        style="@style/textViewBlack16SpBold"
+        android:text="@string/yes"
+        android:gravity="center"
+        android:background="@drawable/continue_bt"
+        android:textColor="@color/white"
+        android:layout_marginTop="@dimen/dp20"
+        android:layout_marginBottom="@dimen/_20sdp"
+        app:layout_constraintStart_toEndOf="@+id/btnDialogNegative"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

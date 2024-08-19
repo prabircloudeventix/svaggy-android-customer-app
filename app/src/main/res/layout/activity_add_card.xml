@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/screen_bg">
+
+
+
+    <ImageView
+        android:id="@+id/backButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:src="@drawable/arrow_back"
+        android:layout_marginTop="@dimen/dp20"
+        android:layout_marginBottom="@dimen/dp20"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/title_tv"
+        style="@style/textViewBlack18SpBold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="@string/credit_debit_card"
+        app:layout_constraintBottom_toBottomOf="@+id/backButton"
+        app:layout_constraintStart_toEndOf="@+id/backButton"
+        app:layout_constraintTop_toTopOf="@+id/backButton"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/txtAddCard"
+        style="@style/textViewStyle16Sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_24sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:fontFamily="@font/jostbold"
+        app:layout_constraintTop_toBottomOf="@id/title_tv"
+        android:text="@string/add_new_card"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <ImageView
+        android:id="@+id/imgDelete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/ic_delete"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/txtAddCard"
+        app:layout_constraintEnd_toEndOf="@+id/consCard"
+        app:layout_constraintTop_toTopOf="@+id/txtAddCard" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/consCard"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/_24sdp"
+        android:layout_marginTop="@dimen/_14sdp"
+        android:layout_marginEnd="@dimen/_24sdp"
+        android:background="@drawable/white_curve_4side"
+        android:elevation="@dimen/_4sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtAddCard">
+
+        <TextView
+            android:id="@+id/textView88"
+            style="@style/textViewStyle16Sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:text="@string/card_number"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.stripe.android.view.CardNumberEditText
+            android:id="@+id/edtCardNumber"
+            style="@style/textViewStyle16Sp"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp50"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:background="@drawable/otp_curve"
+            android:gravity="center_vertical"
+            android:hint="@string/enter_card_number"
+            android:paddingStart="@dimen/_8sdp"
+            android:paddingEnd="@dimen/_8ssp"
+            android:textColorHint="@color/txt_gray"
+            android:textCursorDrawable="@drawable/text_cursor"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView88" />
+
+        <TextView
+            android:id="@+id/txtCardNumber"
+            style="@style/textViewStyle16Sp"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp50"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:background="@drawable/otp_curve"
+            android:gravity="center_vertical"
+            android:paddingStart="@dimen/_8sdp"
+            android:paddingEnd="@dimen/_8ssp"
+            android:textColor="@color/stroke_colr"
+            android:textCursorDrawable="@drawable/text_cursor"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView88" />
+
+        <TextView
+            android:id="@+id/textView94"
+            style="@style/textViewStyle16Sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:text="@string/expiry"
+            app:layout_constraintStart_toStartOf="@+id/edtCardNumber"
+            app:layout_constraintTop_toBottomOf="@+id/edtCardNumber" />
+
+        <com.stripe.android.view.ExpiryDateEditText
+            android:id="@+id/edtExpDate"
+            style="@style/textViewStyle16Sp"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp50"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:background="@drawable/otp_curve"
+            android:hint="@string/mm_yy"
+            android:paddingStart="@dimen/_8sdp"
+            android:paddingEnd="@dimen/_8sdp"
+            android:textCursorDrawable="@drawable/text_cursor"
+            app:layout_constraintEnd_toStartOf="@+id/edtCardCvv"
+            app:layout_constraintStart_toStartOf="@+id/textView94"
+            app:layout_constraintTop_toBottomOf="@+id/textView94" />
+
+        <TextView
+            android:id="@+id/txtExpDate"
+            style="@style/textViewStyle16Sp"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp50"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:background="@drawable/otp_curve"
+            android:gravity="center_vertical"
+            android:paddingStart="@dimen/_8sdp"
+            android:paddingEnd="@dimen/_8sdp"
+            android:textColor="@color/stroke_colr"
+            android:textCursorDrawable="@drawable/text_cursor"
+            android:visibility="gone"
+            app:layout_constraintEnd_toStartOf="@+id/edtCardCvv"
+            app:layout_constraintStart_toStartOf="@+id/textView94"
+            app:layout_constraintTop_toBottomOf="@+id/textView94" />
+
+        <TextView
+            android:id="@+id/textView96"
+            style="@style/textViewStyle16Sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cvv"
+            app:layout_constraintStart_toStartOf="@+id/edtCardCvv"
+            app:layout_constraintTop_toTopOf="@+id/textView94" />
+
+        <com.stripe.android.view.StripeEditText
+            android:id="@+id/edtCardCvv"
+            style="@style/textViewStyle16Sp"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp50"
+            android:background="@drawable/otp_curve"
+            android:hint="@string/cvv"
+            android:inputType="numberPassword"
+            android:maxLength="4"
+            android:minLines="1"
+            android:paddingStart="@dimen/_8sdp"
+            android:paddingEnd="@dimen/_8sdp"
+            android:textCursorDrawable="@drawable/text_cursor"
+            app:layout_constraintEnd_toEndOf="@+id/edtCardNumber"
+            app:layout_constraintStart_toEndOf="@+id/edtExpDate"
+            app:layout_constraintTop_toTopOf="@+id/edtExpDate" />
+
+        <TextView
+            android:id="@+id/textView90"
+            style="@style/textViewStyle16Sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:text="@string/name_on_card"
+            app:layout_constraintStart_toStartOf="@+id/edtExpDate"
+            app:layout_constraintTop_toBottomOf="@+id/edtExpDate" />
+
+        <com.stripe.android.view.StripeEditText
+            android:id="@+id/edtCardName"
+            style="@style/textViewStyle16Sp"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp50"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:background="@drawable/otp_curve"
+            android:hint="@string/enter_name"
+            android:inputType="textCapWords"
+            android:paddingStart="@dimen/_8sdp"
+            android:paddingEnd="@dimen/_8ssp"
+            android:textColorHint="@color/txt_gray"
+            android:textCursorDrawable="@drawable/text_cursor"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/textView90"
+            app:layout_constraintTop_toBottomOf="@+id/textView90" />
+
+        <TextView
+            android:id="@+id/addCard"
+            style="@style/textViewPrimary16SpBold"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:layout_marginBottom="@dimen/_20sdp"
+            android:background="@drawable/continue_bt"
+            android:gravity="center"
+            android:text="@string/save_details"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/edtCardName"
+            app:layout_constraintStart_toStartOf="@+id/edtCardName"
+            app:layout_constraintTop_toBottomOf="@+id/edtCardName" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

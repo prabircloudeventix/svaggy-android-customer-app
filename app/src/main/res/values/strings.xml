@@ -1,0 +1,437 @@
+<resources>
+    <string name="app_name">Svaggy</string>
+    <string name="google_maps_key_old" translatable="false">AIzaSyA3I3BbBKg8dFXAcbJJYJu872jPaLGNcgs</string>
+    <string name="google_maps_key">AIzaSyBKR4lYvqlS4Trdv5br2kyNPTXjofnKcS8</string>
+    <string name="stripe_payment_key">pk_test_51OaC7cSBeAIOIRJFIhBkaO4mDTRI7jVxO0v24A8YHINsOdN5rtiElwjr9eZfLzCXYm75OWfPZsFNYMDu863N5ztV000lhBKWMm</string>
+    <string name="getczx50">Get CZK 500</string>
+    <string name="boading_msg">Get an instant CZK 500 promo coupon after registering with us.</string>
+    <string name="select_combo">Select Combos</string>
+    <string name="boading_sec_msg">Discover endless flavors by selecting your perfect food combo.</string>
+    <string name="compare_prices">Compare Prices</string>
+    <string name="boding_thrd_msg">Find the best deals and compare food prices with ease on our app!</string>
+    <string name="swiftdelivery">Swift Delivery</string>
+    <string name="trackorder">Track Order</string>
+    <string name="wlcom_msg">We are available in</string>
+    <string name="login_acc">Log in to your account</string>
+    <string name="login_txt">LOGIN</string>
+    <string name="cntry_name_code">%1$s +%2$s</string>
+    <string name="cntry_phn_code">+%s</string>
+    <string name="went_wrong">Something went wrong.</string>
+    <string name="select_country">Select Country</string>
+    <string name="search">Search</string>
+    <string name="no_result_found">No result found</string>
+    <string name="have_acc_msg">Don’t Have An Account?</string>
+    <string name="otp_msg_phone">Type the verification code \nwe’ve sent you on your mobile number</string>
+    <string name="otp_msg_email">Type the verification code \nwe’ve sent you on your email address</string>
+    <string name="otp_received">Didn’t receive code?</string>
+    <string name="resend_again">Resend now</string>
+    <string name="siup_txt">Sign Up</string>
+    <string name="forgot_passtxt">Forgot Password</string>
+    <string name="enter_new_password">Enter New Password</string>
+    <string name="confirm_new_password">Confirm New Password</string>
+    <string name="register_msg">Let’s create your account!</string>
+    <string name="login">Log In</string>
+    <string name="enter_email_address">Enter Email Address</string>
+    <string name="enter_mobile_number">Enter Mobile Number</string>
+    <string name="enter_password">Enter Password</string>
+    <string name="prefrence_msg">Choose the type of food you like to eat\n(Minimum One)</string>
+    <string name="seafood_txt">Seafood</string>
+    <string name="chicken_txt">Chicken</string>
+    <string name="fish_txt">Fish</string>
+    <string name="pork_txt">Pork</string>
+    <string name="low_foodmap_txt">Low Foodmap</string>
+    <string name="sides_txt">Sides</string>
+    <string name="vegetarian_txt">Vegetarian</string>
+    <string name="halal_txt">Halal</string>
+    <string name="vegan_txt">Vegan</string>
+    <string name="whole_txt">Whole 30</string>
+    <string name="keto_txt">Keto</string>
+    <string name="glutenfree_txt">Gluten Free</string>
+    <string name="fruits_txt">Fruits</string>
+    <string name="beef_txt">Beef</string>
+    <string name="location_name">6391 Elgin St. Celina</string>
+    <string name="home_msg">What’s on your mind?</string>
+    <string name="all_restaurants">All Restaurants</string>
+    <string name="special_offers_txt">Special Offers Near You</string>
+    <string name="view_all">View All</string>
+    <string name="fifty_explore">50 Restaurants to Explore</string>
+    <string name="all_restaurants_image">All Restaurants</string>
+    <string name="rating_star">Rating Star</string>
+    <string name="hori_line">hori line</string>
+    <string name="combo_layout">Combo Layout</string>
+    <string name="email">Email</string>
+    <string name="enter_email">Enter Email</string>
+    <string name="indicator_image">Indicator Image</string>
+    <string name="search_food">Search Food or Restaurants</string>
+    <string name="search_for_dish">Search for dishes</string>
+    <string name="notification">Notification</string>
+    <string name="arrow_down">Arrow Down</string>
+    <string name="location">Location</string>
+    <string name="search_icon">Search Icon</string>
+    <string name="svaggy">Svaggy</string>
+    <string name="svaggy_food">Svaggy Food</string>
+    <string name="welcome">Welcome</string>
+    <string name="password">Password</string>
+    <string name="phone_number">Mobile Number</string>
+    <string name="facebook_login">Facebook Login</string>
+    <string name="google_login">Google Login</string>
+    <string name="sign_in_with">Sign in with</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="continue_txt">CONTINUE</string>
+    <string name="or">or</string>
+    <string name="log_in_signup">Log in or Sign up</string>
+    <string name="agree_tc_msg">By continuing, you agree to our</string>
+    <string name="terms_service">Terms of service</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="content_policies">Content Policies</string>
+    <string name="search_location">Search Location</string>
+    <string name="send_otp">Send Verification Code</string>
+    <string name="zero_txt">0</string>
+    <string name="country_name_and_code">%1$s (%2$s)</string>
+    <string name="plus">+</string>
+    <string name="detect_current_location">Set Current Location</string>
+    <string name="preferences_txt">Preferences</string>
+    <string name="otp_send_successful">Otp Send Successful</string>
+    <string name="save_location">Save Location</string>
+    <string name="select_delivery_location">Select delivery location</string>
+    <string name="change">Change</string>
+    <string name="confirm_location">Confirm Location</string>
+    //Preet
+    <string name="food_is_being_prepared">Your food is being prepared, you cannot cancel this order. If you want to cancel, contact us below.</string>
+    <string name="Choose_Language">Choose Language</string>
+
+    <string name="selected_item">Selected item:</string>
+    <string-array name="CzechRepublicCities">
+        <item>Prague</item>
+        <item>Brno</item>
+        <item>Ostrava</item>
+        <item>Plzeň</item>
+        <item>Liberec</item>
+        <item>Olomouc</item>
+        <item>České Budějovice</item>
+        <item>Hradec Králové</item>
+        <item>Pardubice</item>
+        <item>Ústí nad Labem</item>
+        <item>Zlín</item>
+        <item>Havířov</item>
+        <item>Kladno</item>
+        <item>Most</item>
+        <item>Opava</item>
+        <item>Frýdek-Místek</item>
+        <item>Jihlava</item>
+        <item>Teplice</item>
+        <item>Karviná</item>
+        <item>Karlovy Vary</item>
+        <item>Děčín</item>
+        <item>Chomutov</item>
+        <item>Jablonec nad Nisou</item>
+        <item>Mladá Boleslav</item>
+        <item>Prostějov</item>
+        <item>Přerov</item>
+        <item>Třinec</item>
+    </string-array>
+    <string name="home">Home</string>
+    <string name="cart">Cart</string>
+    <string name="select_delivery_date_and_time">Delivery Time</string>
+    <string name="offers_and_benefits">Offers and Benefits</string>
+    <string name="apply_coupon">Apply Coupon</string>
+    <string name="address_select_msg">Where would you like to deliver this order?</string>
+    <string name="add_or_select_address">  Add or Select Address</string>
+    <string name="bill_details">Bill Details</string>
+    <string name="select_delivery_date">Select Delivery Date</string>
+    <string name="item_total">Item Total</string>
+    <string name="delivery_fee_5_7_kms">Delivery Fee | 5.7 Kms</string>
+    <string name="tax_15">Tax 15%</string>
+    <string name="czk_10_00">CZK 10.00</string>
+    <string name="total">Total</string>
+    <string name="add_funds">Add Funds</string>
+    <string name="add_more_items">Add More Items</string>
+    <string name="add_cooking_instructions">Add Cooking Instructions</string>
+    <string name="add_new_address">Add New Address</string>
+    <string name="select_an_address">Select an Address</string>
+    <string name="select_date">Select Date</string>
+    <string name="order_content">Order Content</string>
+    <string name="order_delete_content">You have items in your cart from another Restaurant. Clear your cart to add new items?</string>
+    <string name="select_time_slot">Select Time Slot</string>
+    <string name="select_time">Select Time</string>
+    <string name="credit_debit_cards"><![CDATA[Credit & Debit Cards]]></string>
+    <string name="add_new_card">Add New Card</string>
+    <string name="available_coupons">Available Coupons</string>
+    <string name="space_line">- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</string>
+    <string name="coupon_savings"> coupon savings</string>
+    <string name="expiry">Expiry Date</string>
+    <string name="cvv">CVV</string>
+    <string name="name_on_card">Nickname</string>
+    <string name="save_details">Save Details</string>
+    <string name="proceed_to_pay">Proceed to Pay</string>
+    <string name="order_confirmed">Order Confirmed</string>
+    <string name="order_details">Order Details</string>
+    <string name="cancel_order">Cancel Order</string>
+    <string name="web_client_id">21262124450-bk4aq21nq1q6sg8ubebq0kj0g4q5eij3.apps.googleusercontent.com</string>
+    <string name="payment_methods">Payment Methods</string>
+    <string name="my_wallet">My Wallet</string>
+    <string name="settings">Settings</string>
+    <string name="setting">Setting</string>
+    <string name="help">Help</string>
+    <string name="save_changes">Save Changes</string>
+    <string name="menu">Menu</string>
+    <string name="sort_by">Sort By</string>
+    <string name="nearest">Nearest</string>
+    <string name="greatOffers">Great Offers</string>
+    <string name="featured">Featured</string>
+    <string name="veg"> Veg</string>
+    <string name="non_veg">Meat</string>
+    <string name="end_timer_value">00:00</string>
+    <string name="enter_otp">Enter OTP</string>
+    <string name="resend_code">Resend code</string>
+    <string name="delivering_anything_anytime">Order. Eat. Repeat.</string>
+    <string name="sample_text">abc</string>
+    <string name="cancel_image">Cancel Image</string>
+    <string name="confirm">Confirm</string>
+    <string name="curency">CZK</string>
+    <string name="curency_name">CZK&#160;</string>
+    <string name="stringAdd"> %1$s</string>
+    <string name="curencyWith">CZK %s</string>
+    <string name="curencyName">CZK </string>
+    <string name="choose_a_location">Choose a Location</string>
+    <string name="search_in_restaurant"><![CDATA[Search in Anchor & James]]></string>
+    <string name="cancel">Cancel</string>
+    <string name="clear_cart">Clear Cart</string>
+    <string name="edit">Edit</string>
+    <string name="money_added_successfully">Money Added Successfully</string>
+    <string name="add_new_payment_method">Add New Payment Method</string>
+    <string name="account">Account</string>
+    <string name="contact_us_now">Contact Us Now</string>
+    <string name="top_rated">Top Rated</string>
+    <string name="text_restaurant_closed">Uh-oh! Outlet is currently closed till 10:00 AM tomorrow. You can pre order for later.</string>
+    <string name="priceRtn"> %1$s</string>
+    <string name="order_txt">Orders</string>
+    <string name="today_txt">Today</string>
+    <string name="today_small">Today</string>
+    <string name="upcoming_txt">Upcoming</string>
+    <string name="delivered_txt">Delivered</string>
+    <string name="unfulfilled_txt">Unfulfilled</string>
+    <string name="track_order_screen">TrackOrderScreen</string>
+    <string name="rate_order">Rate Your Order</string>
+    <string name="order_screen">OrdersScreen</string>
+    <string name="cart_more_item_screen">CartMoreItemScreen</string>
+    <string name="todo">TODO</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="are_you_sure_you_want_to_cancel_your_order">Are you sure you want to delete this address?</string>
+
+
+    <string name="edit_profile">Edit Profile</string>
+    <string name="change_email_address">Change Email Address</string>
+    <string name="add_email_address">Add Email Address</string>
+    <string name="add_phone_number">Add Phone Number</string>
+    <string name="change_phone_number">Change Phone Number</string>
+    <string name="login_via_email">Login via Email</string>
+    <string name="enter_phone_number">Enter Phone Number</string>
+    <string name="there_are_no_orders">There are no orders</string>
+    <string name="no_orders">Looks like you haven’t added\nanything to your cart yet</string>
+    <string name="all_special_offers_near_you">All Special Offers Near You</string>
+    <string name="added_to_wallet">Added to Wallet</string>
+    <string name="added_to_wallet_bouns">Added to Wallet As a Registration Bonus</string>
+    <string name="paid_for_order">Paid for Order -</string>
+    <string name="rate_your_food">Rate your Order</string>
+    <string name="rate_your_delivery">Rate your Delivery</string>
+    <string name="write_your_reviews">Write your Reviews</string>
+    <string name="submit_review">Submit Review</string>
+    <string name="anchor_amp_james"><![CDATA[Anchor & James]]></string>
+    <string name="received_your_order">Received your Order</string>
+    <string name="manage">Manage</string>
+    <string name="cardType">Credit &amp; Debit Cards</string>
+    <string name="manageCard">Manage Card</string>
+    <string name="enter_name">Enter Name</string>
+    <string name="card_number">Card Number</string>
+    <string name="enter_card_number">Enter Card Number</string>
+    <string name="mm_yy">MM/YY</string>
+    <string name="enter">Enter</string>
+    <string name="paymentMethod">Payment Methods</string>
+    <string name="apt_office_floor">Enter Street Number</string>
+    <string name="street_locality">Enter Floor</string>
+    <string name="czech">Czech</string>
+    <string name="english">English</string>
+    <string name="save">Save</string>
+
+    <string name="your_order_has_been_successfully_placed">Your order has been successfully placed</string>
+    <string name="your_order">Your Order</string>
+    <string name="additional_delivery">Far %s Additional delivery fee will apply</string>
+    <string name="All_Restaurants_By">All %s Restaurants</string>
+    <string name="delivery_to">Delivery to</string>
+    <string name="work">Work</string>
+    <string name="dot">***</string>
+    <string name="showing_result">Showing results for %s</string>
+    <string name="total_Czk">Total | CZK %s</string>
+    <string name="add_to_cart">Add To Cart</string>
+    <string name="customize">Customize</string>
+    <string name="reorder">Reorder</string>
+    <string name="give_review">Give Review</string>
+    <string name="you_rated">You Rated %s</string>
+    <string name="yes">Yes</string>
+    <string name="no">NO</string>
+    <string name="add_Funds">Add Funds to Wallet</string>
+    <string name="far_3_miles_additional_delivery_fee_will_apply">Far (3 km), Additional delivery fee will apply</string>
+    <string name="update_wallet_text">CZK %s has been successfully added into your Svaggy Wallet Updated Balance CZK %s</string>
+    <string name="enter_verification_code">Enter Verification Code</string>
+    <string name="review">%s Reviews</string>
+    <string name="about">About %s</string>
+    <string name="delete_account">Delete Account</string>
+    <string name="pickup">Pick Up</string>
+    <string name="delivery_Avai">Delivery Available</string>
+    <string name="pick_up">Pick Up Only</string>
+    <string name="select_delivery_type">Select Delivery Type</string>
+    <string name="now">Standard</string>
+    <string name="schedule">Schedule</string>
+    <string name="otp_for_this_order">PIN for this delivery</string>
+    <string name="done">Done</string>
+    <string name="delivery">Delivery</string>
+    <string name="low_amount">Your total amount is less than the minimum cart amount required for delivery!</string>
+    <string name="goReview">Go Review</string>
+    <string name="search_in">Search in %s</string>
+    <string name="credit_debit_card"><![CDATA[Credit & Debit Card]]></string>
+    <string name="order_pending">Order Pending</string>
+    <string name="order_preparing">Order Preparing</string>
+    <string name="order_ready">Order Ready</string>
+    <string name="order_out_delivery">Order Out For Delivery</string>
+    <string name="order_delivered">Order Delivered</string>
+    <string name="track_your_2_orders">Track your %s orders</string>
+    <string name="contact_support">Contact Support</string>
+    <string name="how_was_your_food_from_anchor_james">How was your food from %s?</string>
+    <string name="ok">Ok</string>
+    <string name="delayTimeTv">Delivery time may vary due to weather/traffic conditions.</string>
+    <string name="promo_couter">All Promo Codes (%s)</string>
+    <string name="go_to_home">Go To Home</string>
+    <string name="cancelled_refunded"><![CDATA[Cancelled & Refunded]]></string>
+    <string name="chat_support">Chat Support</string>
+    <string name="your_order_has_been_cancelled">Your order has been cancelled</string>
+    <string name="green_promo_text">You Will get <font color="#268836">%s</font> on this order</string>
+    <string name="czk">CZK</string>
+    <string name="combos_available">Combos Available</string>
+    <string name="showing_results_for">Showing results for</string>
+    <string name="debited_from_total_amount">debited from total amount</string>
+    <string name="promo_code_saving">Promo Code Saving</string>
+    <string name="_0">0</string>
+    <string name="_1">1</string>
+    <string name="compare_food_prices">Compare Food Prices</string>
+    <string name="coupons">Coupons</string>
+    <string name="addresses">Addresses</string>
+    <string name="continues">CONTINUE</string>
+    <string name="pod_lipami">Pod Lipami</string>
+    <string name="prague_130_00">Prague 130 00</string>
+    <string name="myself">Myself</string>
+    <string name="someone_else">Someone Else</string>
+    <string name="name">Name</string>
+    <string name="street_number">Street Number</string>
+    <string name="floor">Floor</string>
+    <string name="company_name">Company Name</string>
+    <string name="save_as">Save As</string>
+    <string name="other">Other</string>
+    <string name="skip">Skip</string>
+    <string name="estimated_time_of_delivery">Estimated time of delivery</string>
+    <string name="no_addresses_added_yet">No Addresses Added Yet</string>
+    <string name="add_your_first_address">Add your First Address</string>
+    <string name="current_svaggy_wallet_balance">Current Svaggy Wallet Balance</string>
+    <string name="rate_your_order">Rate Your Order</string>
+    <string name="_1_item_czk_80">1 item, CZK 80</string>
+    <string name="view_cart">View Cart</string>
+    <string name="indian">Indian</string>
+    <string name="stealdeal">STEALDEAL</string>
+    <string name="free_delivery_on_orders_above_500_czk">FREE DELIVERY on orders above 500 CZK</string>
+    <string name="restaurant_safety_measure">RESTAURANT SAFETY MEASURE</string>
+    <string name="sanitized_kitchen">Sanitized Kitchen</string>
+    <string name="note_your_money_will_be_refunded_in_your_source_within_2_business_days">Note: Your money will be refunded in your source within 2 business days.</string>
+    <string name="go_home">Go Home</string>
+    <string name="customize_dal_makhani">Customize Dal Makhani</string>
+    <string name="czk_12">CZK 12</string>
+    <string name="mediumspicy">Medium Spicy, Serves 1, Most loved and sought after dal. Lentils slowly simmered in a very aromatic buttery, creamy tomato sauce with 2 missi roti.</string>
+    <string name="update_cart">Update Cart</string>
+    <string name="total_czk_30">Total | CZK 30</string>
+    <string name="select_any">Select any</string>
+    <string name="orders">Orders</string>
+    <string name="address">Address</string>
+    <string name="logout">Logout</string>
+    <string name="order_delivery">Order Delivery</string>
+    <string name="receive_updates_when_your_order_is_on_the_way_delivered_etc">Receive updates when your order is on the way, delivered, etc.</string>
+    <string name="promotional">Promotional</string>
+    <string name="receive_notifications_about_offers_you_can_use_on_your_next_order">Receive notifications about offers you can use on your next order!</string>
+    <string name="language">Language</string>
+    <string name="after_your_order_is_delivered_a_prompt_will_pop_up_asking_you_to_provide_your_review_alternatively_you_can_go_to_the_orders_section_select_the_delivered_order_and_click_give_review">After your order is delivered, a prompt will pop up asking you to provide your review. Alternatively, you can go to the \'Orders\' section, select the delivered order, and click \'Give Review\'.</string>
+    <string name="how_do_i_leave_feedback_or_a_review">How do I leave feedback or a review?</string>
+    <string name="you_can_contact_customer_support_through_the_chat_support_section_in_the_app">You can contact customer support through the Chat Support section in the app.</string>
+    <string name="how_do_i_contact_customer_support">How do I contact customer support?</string>
+    <string name="additional_support">Additional Support</string>
+    <string name="if_you_wish_to_delete_your_account_go_to_account_and_select_delete_account_follow_the_prompts_to_confirm_the_deletion_please_note_once_the_account_is_deleted_it_cannot_be_restored">If you wish to delete your account, go to Account, and select Delete Account. Follow the prompts to confirm the deletion. Please note - once the account is deleted, it cannot be restored.</string>
+    <string name="how_do_i_delete_my_svaggy_account">How do I delete my Svaggy account?</string>
+    <string name="go_to_the_profile_section_of_the_app_and_click_on_edit_profile_you_can_update_your_name_email_phone_number_and_address_information_there">Go to the Profile section of the app and click on Edit Profile. You can update your name, email, phone number, and address information there.</string>
+    <string name="how_do_i_update_my_profile_information">How do I update my profile information?</string>
+    <string name="account_management">Account Management</string>
+    <string name="to_request_a_refund_go_to_the_orders_section_select_the_order_and_click_on_support_a_support_agent_will_ask_for_your_order_id_and_will_be_able_to_assist_you_with_the_request">To request a refund, go to the \'Orders\' section, select the order, and click on \'Support\'. A support agent will ask for your order ID and will be able to assist you with the request.</string>
+    <string name="how_do_i_request_a_refund">How do I request a refund?</string>
+    <string name="if_you_receive_the_wrong_order_or_items_are_missing_go_to_the_orders_section_select_the_relevant_order_and_click_on_support_you_can_also_contact_customer_support_directly_via_chat_support_in_the_account_section">If you receive the wrong order or items are missing, go to the Orders section, select the relevant order, and click on Support. You can also contact customer support directly via chat support in the “Account” Section.</string>
+    <string name="what_should_i_do_if_i_receive_the_wrong_order_or_items_are_missing">What should I do if I receive the wrong order or items are missing?</string>
+    <string name="issues_and_refunds">Issues and Refunds</string>
+    <string name="once_an_order_is_placed_changing_the_delivery_address_is_not_typically_possible_however_you_can_contact_customer_support_immediately_to_see_if_they_can_assist_with_your_request">Once an order is placed, changing the delivery address is not typically possible. However, you can contact customer support immediately to see if they can assist with your request.</string>
+    <string name="can_i_change_my_delivery_address_after_placing_an_order">Can I change my delivery address after placing an order?</string>
+    <string name="if_your_order_is_significantly_delayed_you_can_contact_customer_support_through_the_app_by_clicking_on_support_or_by_chat_support_in_account_section">If your order is significantly delayed, you can contact customer support through the app by clicking on Support or by chat support in “Account” Section.</string>
+    <string name="what_if_my_order_is_late">What if my order is late?</string>
+    <string name="after_placing_your_order_you_can_track_its_status_in_real_time_by_clicking_on_the_track_order_button_in_the_orders_section">After placing your order, you can track its status in real-time by clicking on the Track Order button in the Orders section.</string>
+    <string name="how_do_i_track_my_order">How do I track my order?</string>
+    <string name="how_do_i_use_a_promo_code_or_discount">How do I use a promo code or discount?</string>
+    <string name="a_select_your_promo_code_on_the_checkout_page_in_the_promo_code_section_before_placing_your_order_the_discount_will_be_applied_to_your_total">A: Select your promo code on the checkout page in the Promo Code section before placing your order. The discount will be applied to your total.</string>
+    <string name="a_svaggy_accepts_major_credit_and_debit_cards_and_svaggy_wallet_you_can_add_or_update_your_payment_methods_in_the_payment_section_of_the_app">A: Svaggy accepts major credit and debit cards and Svaggy Wallet. You can add or update your payment methods in the Payment section of the app.</string>
+    <string name="what_payment_methods_are_accepted">What payment methods are accepted?</string>
+    <string name="a_yes_during_the_checkout_process_you_can_select_schedule_for_later_and_choose_your_preferred_delivery_date_and_time">A: Yes, during the checkout process, you can select Schedule for Later and choose your preferred delivery date and time.</string>
+    <string name="can_i_schedule_an_order_for_later">Can I schedule an order for later?</string>
+    <string name="a_select_the_restaurant_you_want_to_order_from_choose_your_desired_items_customize_them_if_needed_and_add_them_to_your_cart_once_you_are_ready_go_to_your_cart_review_your_order_and_click_on_checkout">A: Select the restaurant you want to order from, choose your desired items, customize them if needed, and add them to your cart. Once you are ready, go to your cart, review your order, and click on Checkout.</string>
+    <string name="how_do_i_place_an_order">How do I place an order?</string>
+    <string name="use_the_search_bar_at_the_top_of_the_home_screen_to_enter_the_name_of_the_restaurant_or_type_of_cuisine_you_are_looking_for_you_can_also_browse_cuisine_categories_or_use_filters_to_narrow_down_your_search">Use the search bar at the top of the home screen to enter the name of the restaurant or type of cuisine you are looking for. You can also browse cuisine categories or use filters to narrow down your search.</string>
+    <string name="how_do_i_search_for_restaurants_or_food_items">How do I search for restaurants or food items?</string>
+    <string name="placing_an_order">Placing an Order</string>
+    <string name="download_the_svaggy_app_from_the_app_store_or_google_play_store_open_the_app_and_sign_up_with_your_phone_number_or_email_address_if_you_sign_up_with_your_phone_number_you_will_receive_an_otp_via_sms_if_you_sign_up_with_your_email_address_you_will_receive_the_otp_in_your_email_enter_the_otp_to_complete_the_sign_up_process_alternatively_there_is_an_option_to_sign_up_with_your_google_and_apple_account">Download the Svaggy app from the App Store or Google Play Store. Open the app and \'Sign Up\' with your phone number or email address. If you sign up with your phone number, you will receive an OTP via SMS. If you sign up with your email address, you will receive the OTP in your email. Enter the OTP to complete the sign-up process. Alternatively there is an option to sign up with your google and apple account.</string>
+    <string name="how_do_i_create_an_account_on_svaggy">How do I create an account on Svaggy?</string>
+    <string name="getting_started">Getting Started</string>
+    <string name="add_funds_to_wallet">Add Funds to Wallet</string>
+    <string name="no_transactions_yet">No transactions yet</string>
+    <string name="make_your_first_transfer">Make Your First Transfer</string>
+    <string name="first_name">First Name</string>
+    <string name="enter_first_name">Enter First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="enter_last_name">Enter Last Name</string>
+    <string name="email_address">Email Address</string>
+    <string name="mobile_number">Mobile Number</string>
+    <string name="_00">00</string>
+    <string name="select_payment_method">Select Payment Method</string>
+    <string name="view_menu">View Menu</string>
+    <string name="total_amount">Total Amount</string>
+    <string name="czk_80">CZK 80</string>
+    <string name="view_restaurants">View Restaurants</string>
+    <string name="looks_like_you_haven_t_added_nanything_to_your_cart_yet">Looks like you haven’t added\nanything to your cart yet</string>
+    <string name="your_cart_is_currently_empty">Your cart is currently empty</string>
+    <string name="checkout">CHECKOUT</string>
+    <string name="empty_mail">Please enter your email address</string>
+    <string name="empty_last_mail">Please enter your last name</string>
+    <string name="empty_first_mail">Please enter your first name</string>
+    <string name="repat_last">Repeat last used customization?</string>
+    <string name="add_new_customization">Add new customization</string>
+    <string name="update_available">Update Available</string>
+    <string name="time_update_available">Time to update your app</string>
+    <string name="flat_deal">FLAT DEAL</string>
+    <string name="on_selected_dishes">on selected dishes</string>
+    <string name="set_as_deafult">Set as Default</string>
+    <string name="edit_address">Edit Address</string>
+    <string name="def">Default</string>
+    <string name="clear_cart_new">Clear cart?</string>
+    <string name="text_cart">Are you sure you want to clear your cart from “%s”?</string>
+    <string name="currently_unavailable">Currently Unavailable</string>
+    <string name="more_info">More Info</string>
+    <string name="opening_hours">Opening Hours</string>
+    <string name="recent_searches">Recent Searches</string>
+    <string name="popular_cuisines">Popular Cuisines</string>
+    <string name="off_On">%s OFF on selected dishes</string>
+
+
+
+
+</resources>

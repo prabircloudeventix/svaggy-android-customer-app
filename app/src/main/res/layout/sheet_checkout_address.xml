@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/addressSelectMainCl"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/white_curve_twoside"
+    android:elevation="@dimen/_14sdp"
+    android:visibility="visible"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <TextView
+        android:id="@+id/txtSelectAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_24sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:text="@string/select_an_address"
+        android:visibility="visible"
+        style="@style/textViewStyle16Sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/addressRecyclerView"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/addressRecyclerView"
+        tools:itemCount="3"
+        tools:listitem="@layout/item_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_14sdp"
+        android:layout_marginBottom="@dimen/_16sdp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:visibility="visible"
+        android:overScrollMode="ifContentScrolls"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtSelectAddress"
+        app:layout_constraintBottom_toTopOf="@+id/divider10"/>
+
+
+    <View
+        android:id="@+id/divider10"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/_6sdp"
+        android:layout_marginBottom="@dimen/_8sdp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintBottom_toTopOf="@+id/addNewAddress"
+        app:layout_constraintTop_toBottomOf="@+id/addressRecyclerView"
+        app:layout_constraintStart_toStartOf="@+id/addressRecyclerView"
+        app:layout_constraintEnd_toEndOf="@+id/addressRecyclerView"/>
+
+    <TextView
+        android:id="@+id/addNewAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_24sdp"
+        android:layout_marginEnd="@dimen/_24sdp"
+        android:layout_marginBottom="@dimen/_20sdp"
+        android:fontFamily="@font/jostbold"
+        android:gravity="center_vertical"
+        android:text="@string/add_new_address"
+        android:textColor="@color/primaryColor"
+        android:textSize="@dimen/sp18"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider10"
+        app:drawableStartCompat="@drawable/address_red_icon" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

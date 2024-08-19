@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_2sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/txtAddOnsName"
+            style="@style/textViewBlack14SpBold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_14sdp"
+            android:text="Extra Sauce/Vegetable"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txtChooseUpto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:text="Choose up to 2 items"
+            style="@style/textViewStyle14Sp"
+            app:layout_constraintStart_toStartOf="@+id/txtAddOnsName"
+            app:layout_constraintTop_toBottomOf="@+id/txtAddOnsName" />
+
+        <TextView
+            android:id="@+id/txtRequired"
+            android:layout_width="@dimen/_70sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:text="Required"
+            android:gravity="center"
+            style="@style/textViewBlack14Sp"
+            android:textColor="@color/green_clr"
+            android:background="@drawable/green_stroke_eightdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/txtAddOnsName" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerAddOneRelation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5ssp"
+            android:visibility="visible"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtChooseUpto"
+            tools:itemCount="2"
+            tools:listitem="@layout/item_add_ons_relation" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ViewPagerIndicator">
+        <attr name="selectedColor" format="color"/>
+        <attr name="deselectedColor" format="color"/>
+        <attr name="selectedDrawable" format="reference" />
+        <attr name="deselectedDrawable" format="reference"/>
+        <attr name="indicatorSpacing" format="dimension"/>
+        <attr name="enableAnimation" format="boolean"/>
+        <attr name="animationDuration" format="integer"/>
+        <attr name="animationScale" format="float"/>
+        <attr name="backgroundColor" format="color"/>
+    </declare-styleable>
+
+    <declare-styleable name="CountryCodePicker">
+        <attr name="ccp_defaultCode" format="integer" />
+        <attr name="ccp_textColor" format="color" />
+        <attr name="ccp_backgroundColor" format="color" />
+        <attr name="ccp_textSize" format="dimension" />
+        <attr name="ccp_textFont" format="string" />
+        <attr name="ccp_arrowSize" format="dimension" />
+        <attr name="ccp_countryPreference" format="string" />
+        <attr name="ccp_defaultNameCode" format="string" />
+        <attr name="ccp_hideNameCode" format="boolean" />
+        <attr name="ccp_keyboardAutoPopOnSearch" format="boolean" />
+        <attr name="ccp_customMasterCountries" format="string" />
+        <attr name="ccp_showFlag" format="boolean" />
+        <attr name="ccp_showFullName" format="boolean" />
+        <attr name="ccp_selectionDialogShowSearch" format="boolean" />
+        <attr name="ccp_clickable" format="boolean" />
+        <attr name="ccp_hidePhoneCode" format="boolean" />
+        <attr name="ccp_enableHint" format="boolean" />
+        <attr name="ccp_enablePhoneAutoFormatter" format="boolean" />
+        <attr name="ccp_setCountryByTimeZone" format="boolean" />
+        <attr name="ccp_dialogTextColor" format="color" />
+    </declare-styleable>
+
+
+    <declare-styleable name="WheelPicker">
+        <attr name="scroll_data" format="reference" />
+        <attr name="scroll_background_color" format="color" />
+        <attr name="scroll_selected_item_background" format="color" />
+        <attr name="scroll_selected_item_position" format="integer" />
+        <attr name="scroll_item_text_size" format="dimension" />
+        <attr name="scroll_item_text_color" format="color" />
+        <attr name="scroll_selected_item_text_color" format="color" />
+        <attr name="scroll_maximum_width_text" format="string" />
+        <attr name="scroll_maximum_width_text_position" format="integer" />
+        <attr name="scroll_visible_item_count" format="integer" />
+        <attr name="scroll_item_space" format="dimension" />
+        <attr name="scroll_indicator" format="boolean" />
+        <attr name="scroll_indicator_color" format="color" />
+        <attr name="scroll_indicator_size" format="dimension" />
+        <attr name="scroll_atmospheric" format="boolean" />
+        <attr name="scroll_item_align" format="enum">
+            <enum name="center" value="0" />
+            <enum name="left" value="1" />
+            <enum name="right" value="2" />
+        </attr>
+    </declare-styleable>
+</resources>

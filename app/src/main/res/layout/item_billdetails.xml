@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/billDetailsName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_18sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:fontFamily="@font/jostregular"
+            android:drawablePadding="15dp"
+            android:text="@string/item_total"
+            android:textColor="@color/txt_black"
+            android:textSize="@dimen/sp14"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txtBillAmount"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_18sdp"
+            android:fontFamily="@font/jostregular"
+            android:gravity="end"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:text="CZK  80"
+            android:textColor="@color/txt_black"
+            android:textSize="@dimen/sp14"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/billDetailsName"
+            app:layout_constraintTop_toTopOf="@+id/billDetailsName" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

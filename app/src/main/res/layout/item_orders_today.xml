@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_10sdp"
+        android:background="@drawable/white_curve_4side"
+        android:elevation="@dimen/_4sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clRestaurantName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_20sdp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/tvSupport"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <TextView
+                android:id="@+id/txtRestaurantName"
+                style="@style/textViewBlack16SpBold"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:drawablePadding="@dimen/_10sdp"
+                android:fontFamily="@font/jostbold"
+                android:text="STEALDEAL"
+                android:textSize="@dimen/_16sdp"
+                app:layout_constraintEnd_toStartOf="@+id/imageView27"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imageView27"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_6sdp"
+
+                android:src="@drawable/back_arrow"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/txtRestaurantName"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/textRestaurantAddress"
+            style="@style/textViewStyle14Sp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:text="Palladium, Na Poříčí 1079/3a"
+            app:layout_constraintEnd_toStartOf="@+id/tvSupport"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/clRestaurantName" />
+
+
+        <TextView
+            android:id="@+id/tvSupport"
+            style="@style/textViewPrimary14Spmedium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:fontFamily="@font/jostbold"
+            android:text="Support"
+            app:layout_constraintBottom_toBottomOf="@+id/clRestaurantName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/clRestaurantName" />
+
+        <TextView
+            android:id="@+id/spaceline"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp20"
+            android:maxLines="1"
+            android:minLines="1"
+            android:text="@string/space_line"
+            android:textColor="@color/stroke_colr"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textRestaurantAddress" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerOrdersDish"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/dp20"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:overScrollMode="never"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintEnd_toStartOf="@+id/textRestaurantDishPrice"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/spaceline"
+            tools:itemCount="2"
+            tools:listitem="@layout/item_cart_dish" />
+
+        <TextView
+            android:id="@+id/textRestaurantDishPrice"
+            style="@style/textViewBlack16SpBold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp20"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:text="CZK 12"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/spaceline" />
+
+
+
+        <TextView
+            android:id="@+id/btnReOrder"
+            style="@style/textViewPrimary14Spbold"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp40"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:layout_marginBottom="@dimen/_16sdp"
+            android:layout_marginTop="@dimen/dp20"
+            android:background="@drawable/continue_bt"
+            android:gravity="center"
+            android:text="@string/reorder"
+            android:textColor="@color/white"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btnGiveReview"
+            app:layout_constraintTop_toBottomOf="@+id/recyclerOrdersDish" />
+
+
+
+        <TextView
+            android:id="@+id/btnGiveReview"
+            style="@style/textViewStyleBold14SpSubText"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp40"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+           app:layout_constraintTop_toTopOf="@id/btnReOrder"
+            android:background="@drawable/radius_black"
+            android:gravity="center"
+            android:text="@string/give_review"
+            android:textColor="@color/sub_txt_gray"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="@id/btnReOrder"
+            app:layout_constraintEnd_toStartOf="@+id/btnReOrder"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/recyclerOrdersDish" />
+
+
+        <TextView
+            android:id="@+id/getReview"
+            android:layout_width="0dp"
+            app:layout_constraintBottom_toBottomOf="@+id/btnReOrder"
+            app:layout_constraintEnd_toStartOf="@+id/btnReOrder"
+            app:layout_constraintStart_toStartOf="parent"
+            android:text="@string/you_rated"
+            android:gravity="center"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@+id/recyclerOrdersDish"
+            android:layout_height="@dimen/dp40"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/dp20"
+            android:layout_marginEnd="@dimen/_40sdp"
+            app:drawableEndCompat="@drawable/ic_start" />
+
+
+
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

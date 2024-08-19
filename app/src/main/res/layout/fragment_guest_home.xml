@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/nestedScrollView"
+    android:background="@color/screen_bg"
+    android:overScrollMode="never">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/location_get"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp24"
+            android:layout_marginTop="@dimen/dp16"
+            android:layout_marginEnd="@dimen/dp24"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/imgNotification">
+
+            <TextView
+                android:id="@+id/textView29"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/jostregular"
+                android:text="@string/location"
+                android:textColor="@color/txt_gray"
+                android:textSize="@dimen/sp14"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/txtCurrentAddress"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/jostmedium"
+                android:text="@string/choose_a_location"
+                android:textColor="@color/primaryColor"
+                android:textSize="@dimen/sp14"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:drawablePadding="@dimen/_5sdp"
+                app:layout_constraintStart_toStartOf="@+id/textView29"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView29"
+                app:drawableStartCompat="@drawable/ic_current_location"
+                app:drawableEndCompat="@drawable/show_down" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ImageView
+            android:id="@+id/imgNotification"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dp24"
+            android:visibility="gone"
+            android:src="@drawable/notification"
+            app:layout_constraintBottom_toBottomOf="@+id/location_get"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:contentDescription="@string/notification" />
+
+        <TextView
+            android:id="@+id/txtSearch"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginTop="@dimen/dp25"
+            android:paddingStart="@dimen/_8sdp"
+            android:hint="@string/search_food"
+            android:inputType="text"
+            android:fontFamily="@font/jostregular"
+            android:textSize="@dimen/sp16"
+            android:textColorHint="@color/txt_gray"
+            android:textColor="@color/txt_gray"
+            android:gravity="center_vertical"
+            android:background="@drawable/radius_black"
+            android:layout_marginEnd="@dimen/dp24"
+            android:layout_marginStart="@dimen/dp24"
+            android:textCursorDrawable="@drawable/text_cursor"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/location_get"
+            tools:ignore="RtlSymmetry"
+            android:autofillHints="Search Product"
+            android:drawablePadding="@dimen/_2sdp"
+            android:drawableTint="@color/txt_gray"
+            app:drawableStartCompat="@drawable/search_icon"  />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/viewPagerLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtSearch">
+            <com.svaggy.utils.CustomViewPager
+                android:id="@+id/offerSlider"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_199sdp"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <com.svaggy.utils.ViewPagerIndicator
+                android:id="@+id/indicator"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_20sdp"
+                android:padding="5dp"
+                android:layout_marginTop="-20dp"
+                android:gravity="center_horizontal|center_vertical"
+                app:selectedDrawable="@drawable/bg_icon"
+                app:deselectedDrawable="@drawable/bg_round_white"
+                app:animationDuration="100"
+                app:animationScale="1.4"
+                app:enableAnimation="true"
+                app:layout_constraintTop_toBottomOf="@+id/offerSlider"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/textView31"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/dp25"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:textSize="@dimen/_16ssp"
+            android:fontFamily="@font/jostbold"
+            android:textColor="@color/txt_black"
+            android:text="@string/home_msg"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/viewPagerLayout" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerCuisines"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:overScrollMode="never"
+            tools:listitem="@layout/item_cuisines"
+            tools:itemCount="2"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView31">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_14sdp"
+            android:visibility="visible"
+            android:background="@color/spc_off_bg"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/recyclerCuisines">
+
+            <TextView
+                android:id="@+id/textView37"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp24"
+                android:layout_marginTop="@dimen/dp24"
+                android:fontFamily="@font/jostbold"
+                android:text="@string/special_offers_txt"
+                android:textColor="@color/txt_black"
+                app:layout_constraintEnd_toStartOf="@id/offerViewAllBt"
+                android:textSize="@dimen/sp18"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/offerViewAllBt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dp24"
+                android:fontFamily="@font/jostbold"
+                android:text="@string/view_all"
+                android:textColor="@color/primaryColor"
+                android:textSize="@dimen/sp14"
+                app:layout_constraintBottom_toBottomOf="@+id/textView37"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/textView37" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/shimmerBarOffer"
+                android:orientation="horizontal"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView37">
+
+                <include layout="@layout/shimmer_layout_offer"/>
+
+                <include layout="@layout/shimmer_layout_offer"/>
+
+                <include layout="@layout/shimmer_layout_offer"/>
+
+
+
+            </LinearLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/consEmptyOfferRestaurant"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView37">
+                <ImageView
+                    android:id="@+id/imgEmptyOfferRestaurant"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_sad"
+                    android:layout_marginTop="@dimen/_52sdp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"/>
+                <TextView
+                    android:id="@+id/txtEmptyOfferRestaurant"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_24sdp"
+                    android:text="Bummer! No Results"
+                    style="@style/textViewBlack16SpBold"
+                    app:layout_constraintTop_toBottomOf="@+id/imgEmptyOfferRestaurant"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"/>
+                <TextView
+                    android:id="@+id/txtOfferRestaurantDesc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:layout_marginBottom="@dimen/_52sdp"
+                    android:text="As per your filter suggestions,\nNo restaurants were found"
+                    style="@style/textViewStyle14Sp"
+                    android:textAlignment="center"
+                    app:layout_constraintTop_toBottomOf="@+id/txtEmptyOfferRestaurant"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerOfferRestaurants"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:overScrollMode="never"
+                android:padding="@dimen/_10sdp"
+                tools:listitem="@layout/item_offer_restaurant"
+                tools:itemCount="5"
+                android:orientation="horizontal"
+                android:visibility="visible"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView37"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/textView32"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp24"
+            android:layout_marginTop="@dimen/_24sdp"
+            android:fontFamily="@font/jostbold"
+            android:text="@string/all_restaurants"
+            android:textColor="@color/txt_black"
+            android:textSize="@dimen/_16ssp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout7" />
+
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerRestaurantsFilter"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/dp24"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            tools:listitem="@layout/item_filter_restaurants"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/textView32"
+            app:layout_constraintTop_toBottomOf="@+id/textView32" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/consEmptyRestaurant"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/recyclerRestaurantsFilter">
+            <ImageView
+                android:id="@+id/imgEmptyCart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_sad"
+                android:layout_marginTop="@dimen/_52sdp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+            <TextView
+                android:id="@+id/txtCartEmpty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_24sdp"
+                android:text="Bummer! No Results"
+                style="@style/textViewBlack16SpBold"
+                app:layout_constraintTop_toBottomOf="@+id/imgEmptyCart"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+            <TextView
+                android:id="@+id/txtCartDesc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_marginBottom="@dimen/_52sdp"
+                android:text="As per your filter suggestions,\nNo restaurants were found"
+                style="@style/textViewStyle14Sp"
+                android:textAlignment="center"
+                app:layout_constraintTop_toBottomOf="@+id/txtCartEmpty"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerRestaurants"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:overScrollMode="never"
+            android:padding="@dimen/_10ssp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/recyclerRestaurantsFilter"
+            tools:itemCount="2"
+            tools:listitem="@layout/item_all_restaurants" />
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/shimmerBar"
+            android:orientation="vertical"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/recyclerRestaurantsFilter">
+
+            <include layout="@layout/shimmer_layout_restaurant"/>
+
+            <include layout="@layout/shimmer_layout_restaurant"/>
+
+            <include layout="@layout/shimmer_layout_restaurant"/>
+
+
+
+        </LinearLayout>
+
+
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+</androidx.core.widget.NestedScrollView>

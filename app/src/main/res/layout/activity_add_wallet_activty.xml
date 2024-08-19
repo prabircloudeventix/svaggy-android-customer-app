@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/screen_bg"
+    tools:context=".ui.fragments.wallet.screens.WalletAddFund">
+
+
+    <ImageView
+        android:id="@+id/backButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:src="@drawable/arrow_back"
+        android:layout_marginTop="@dimen/dp20"
+        android:layout_marginBottom="@dimen/dp20"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/title_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/add_funds_to_wallet"
+        style="@style/textViewBlack18SpBold"
+        android:layout_marginStart="@dimen/dp10"
+        app:layout_constraintBottom_toBottomOf="@+id/backButton"
+        app:layout_constraintStart_toEndOf="@+id/backButton"
+        app:layout_constraintTop_toTopOf="@+id/backButton" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/czk"
+        style="@style/textViewStyle16Sp"
+        android:textColor="@color/sub_txt_gray"
+        android:layout_marginBottom="@dimen/_4sdp"
+        app:layout_constraintBottom_toTopOf="@+id/etAmountAdd"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/etAmountAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/_00"
+        android:inputType="number"
+        android:textColorHint="#000000"
+        android:gravity="center"
+        android:textColor="#000000"
+        android:fontFamily="@font/jostmedium"
+        android:background="@drawable/white_curve_4side"
+        android:padding="@dimen/_5ssp"
+        android:layout_marginBottom="@dimen/_16sdp"
+        android:textSize="@dimen/_32ssp"
+        android:textCursorDrawable="@drawable/text_cursor"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerSelectAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:itemCount="1"
+            tools:listitem="@layout/item_amount_show" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout5"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout2">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clSelectPaymentMethod"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_50sdp"
+            android:background="@drawable/white_curve_twoside"
+            android:elevation="@dimen/_14sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <TextView
+                android:id="@+id/textView38"
+                style="@style/textViewBlack18SpBold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_24sdp"
+                android:background="@color/white"
+                android:text="@string/select_payment_method"
+                android:visibility="gone"
+                app:layout_constraintBottom_toTopOf="@+id/recyclerSelectPayment"
+                app:layout_constraintStart_toStartOf="@+id/clSelectPaymentMethod"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imageView10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_24sdp"
+                android:src="@drawable/show_down"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@+id/textView38"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/textView38"
+                app:tint="@color/black" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerSelectPayment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:overScrollMode="ifContentScrolls"
+                android:visibility="gone"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintBottom_toTopOf="@+id/addCardBt"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:itemCount="1"
+                tools:listitem="@layout/item_select_payment" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/addCardBt"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toTopOf="@+id/btWalletAmountAdd"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <TextView
+                    android:id="@+id/txtAddNewCard"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_14sdp"
+                    android:layout_marginEnd="@dimen/_24sdp"
+                    android:fontFamily="@font/jostmedium"
+                    android:text="@string/add_new_payment_method"
+                    android:textColor="@color/primaryColor"
+                    android:textSize="@dimen/sp14"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageView37"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/imageView37"
+                    app:layout_constraintTop_toTopOf="@+id/imageView37" />
+
+                <ImageView
+                    android:id="@+id/imageView37"
+                    android:layout_width="@dimen/_24sdp"
+                    android:layout_height="@dimen/_24sdp"
+                    android:layout_marginStart="@dimen/_24sdp"
+                    android:src="@drawable/add_icon"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/btWalletAmountAdd"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:background="@drawable/continue_bt"
+                android:fontFamily="@font/jostbold"
+                android:gravity="center"
+                android:text="@string/add_funds"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp16"
+                app:layout_constraintBottom_toBottomOf="@id/clSelectPaymentMethod"
+                app:layout_constraintEnd_toEndOf="@id/clSelectPaymentMethod"
+                app:layout_constraintStart_toStartOf="@id/clSelectPaymentMethod" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/screen_bg">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/consHelp1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="@dimen/_4sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_12sdp"
+        android:layout_marginStart="@dimen/_24sdp"
+        android:layout_marginEnd="@dimen/_24sdp"
+        android:padding="@dimen/_20sdp"
+        android:background="@drawable/white_curve_4side"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/txtHelp1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Do I need to order in advance?"
+            style="@style/textViewBlack16SpBold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txtHelpDesc1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            style="@style/textViewBlack14Sp"
+            android:textColor="@color/sub_txt_gray"
+            android:text="Vitae congue eu consequat ac felis placerat vestibulum lectus mauris ultrices. Cursus sit amet dictum sit amet justo donec enim diam porttitor lacus luctus accumsan tortor posuere."
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtHelp1" />
+
+        <ImageView
+            android:id="@+id/imgHide"
+            android:layout_width="@dimen/_15sdp"
+            android:layout_height="@dimen/_15sdp"
+            android:src="@drawable/ic_minus"
+            android:padding="@dimen/_2sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/txtHelp1"
+            app:layout_constraintBottom_toBottomOf="@id/txtHelp1"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/consHelp2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="@dimen/_4sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_12sdp"
+        android:layout_marginStart="@dimen/_24sdp"
+        android:layout_marginEnd="@dimen/_24sdp"
+        android:padding="@dimen/_20sdp"
+        android:background="@drawable/white_curve_4side"
+        app:layout_constraintTop_toBottomOf="@id/consHelp1">
+
+        <TextView
+            android:id="@+id/txtHelp2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="What areas do you serve?"
+            style="@style/textViewBlack16SpBold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txtHelpDesc2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            style="@style/textViewBlack14Sp"
+            android:textColor="@color/sub_txt_gray"
+            android:text="Vitae congue eu consequat ac felis placerat vestibulum lectus mauris ultrices. Cursus sit amet dictum sit amet justo donec enim diam porttitor lacus luctus accumsan tortor posuere."
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtHelp2" />
+
+        <ImageView
+            android:id="@+id/imgHide2"
+            android:layout_width="@dimen/_15sdp"
+            android:layout_height="@dimen/_15sdp"
+            android:src="@drawable/ic_minus"
+            android:padding="@dimen/_2sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/txtHelp2"
+            app:layout_constraintBottom_toBottomOf="@id/txtHelp2"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/consHelp3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="@dimen/_4sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_12sdp"
+        android:layout_marginStart="@dimen/_24sdp"
+        android:layout_marginEnd="@dimen/_24sdp"
+        android:padding="@dimen/_20sdp"
+        android:background="@drawable/white_curve_4side"
+        app:layout_constraintTop_toBottomOf="@id/consHelp2">
+
+        <TextView
+            android:id="@+id/txtHelp3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Any delivery fee?"
+            style="@style/textViewBlack16SpBold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txtHelpDesc3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:visibility="gone"
+            style="@style/textViewBlack14Sp"
+            android:textColor="@color/sub_txt_gray"
+            android:text="Vitae congue eu consequat ac felis placerat vestibulum lectus mauris ultrices. Cursus sit amet dictum sit amet justo donec enim diam porttitor lacus luctus accumsan tortor posuere."
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtHelp3" />
+
+        <ImageView
+            android:id="@+id/imgHide3"
+            android:layout_width="@dimen/_15sdp"
+            android:layout_height="@dimen/_15sdp"
+            android:src="@drawable/ic_add"
+            android:padding="@dimen/_2sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/txtHelp3"
+            app:layout_constraintBottom_toBottomOf="@id/txtHelp3"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/consHelp4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="@dimen/_4sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_12sdp"
+        android:layout_marginStart="@dimen/_24sdp"
+        android:layout_marginEnd="@dimen/_24sdp"
+        android:padding="@dimen/_20sdp"
+        android:background="@drawable/white_curve_4side"
+        app:layout_constraintTop_toBottomOf="@id/consHelp3">
+
+        <TextView
+            android:id="@+id/txtHelp4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Can I schedule my 3 days meal?"
+            style="@style/textViewBlack16SpBold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txtHelpDesc4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            style="@style/textViewBlack14Sp"
+            android:textColor="@color/sub_txt_gray"
+            android:text="Vitae congue eu consequat ac felis placerat vestibulum lectus mauris ultrices. Cursus sit amet dictum sit amet justo donec enim diam porttitor lacus luctus accumsan tortor posuere."
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtHelp4" />
+
+        <ImageView
+            android:id="@+id/imgHide4"
+            android:layout_width="@dimen/_15sdp"
+            android:layout_height="@dimen/_15sdp"
+            android:src="@drawable/ic_minus"
+            android:padding="@dimen/_2sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/txtHelp4"
+            app:layout_constraintBottom_toBottomOf="@id/txtHelp4"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/txtLoginButton"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginStart="@dimen/_24sdp"
+        android:layout_marginBottom="@dimen/_24sdp"
+        android:layout_marginEnd="@dimen/_24sdp"
+        android:background="@drawable/continue_bt"
+        android:fontFamily="@font/jostbold"
+        android:gravity="center"
+        android:text="@string/contact_us_now"
+        android:textAlignment="center"
+        android:textColor="@color/txt_white"
+        android:textSize="@dimen/_14ssp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

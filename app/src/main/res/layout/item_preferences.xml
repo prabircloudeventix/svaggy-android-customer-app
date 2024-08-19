@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/preference"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_45ssp"
+    android:layout_margin="@dimen/_8ssp"
+    android:background="@drawable/radius_black">
+
+    <TextView
+        android:id="@+id/preference_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="textStart"
+        android:textSize="@dimen/_11ssp"
+        android:textColor="@color/txt_black"
+        android:fontFamily="@font/jostregular"
+        android:text="@string/seafood_txt"
+        android:maxLines="1"
+        android:layout_marginStart="10dp"
+        app:layout_constraintStart_toEndOf="@id/preference_img"
+        app:layout_constraintTop_toTopOf="@id/preference_img"
+        app:layout_constraintBottom_toBottomOf="@id/preference_img"/>
+
+    <ImageView
+        android:id="@+id/preference_img"
+        android:layout_width="@dimen/_20ssp"
+        android:layout_height="@dimen/_20ssp"
+        android:layout_marginStart="@dimen/dp13"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

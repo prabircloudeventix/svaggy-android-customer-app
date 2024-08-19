@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/txt_white"
+    tools:context=".ui.screens.register.RegisterAccFragment">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_back"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView19"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Register"
+        android:fontFamily="@font/jostbold"
+        android:textSize="@dimen/dp24"
+        android:textColor="@color/txt_black"
+        android:layout_marginTop="@dimen/dp12"
+        android:layout_marginStart="@dimen/dp24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+    <TextView
+        android:id="@+id/textView20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/register_msg"
+        android:fontFamily="@font/jostregular"
+        android:textSize="@dimen/sp16"
+        android:layout_marginTop="@dimen/dp8"
+        app:layout_constraintStart_toStartOf="@+id/textView19"
+        app:layout_constraintTop_toBottomOf="@+id/textView19" />
+
+    <TextView
+        android:id="@+id/textView21"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="First Name"
+        android:textSize="@dimen/sp16"
+        android:textColor="@color/txt_black"
+        android:fontFamily="@font/jostregular"
+        android:layout_marginTop="@dimen/dp30"
+        app:layout_constraintStart_toStartOf="@+id/textView20"
+        app:layout_constraintTop_toBottomOf="@+id/textView20" />
+
+    <EditText
+        android:id="@+id/enter_first_name"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dp40"
+        android:background="@drawable/radius_black"
+        android:paddingStart="@dimen/_12sdp"
+        android:paddingTop="@dimen/dp8"
+        android:paddingEnd="@dimen/_12sdp"
+        android:text="Enter First Name"
+        android:paddingBottom="@dimen/dp8"
+        android:layout_marginTop="@dimen/dp8"
+        android:layout_marginEnd="@dimen/dp24"
+        android:textColor="@color/txt_gray"
+        android:textSize="@dimen/sp14"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/textView21"
+        app:layout_constraintTop_toBottomOf="@+id/textView21" />
+
+    <TextView
+        android:id="@+id/textView22"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/jostregular"
+        android:text="Last Name"
+        android:layout_marginTop="@dimen/dp20"
+        android:textColor="@color/txt_black"
+        android:textSize="@dimen/sp16"
+        app:layout_constraintStart_toStartOf="@+id/textView20"
+        app:layout_constraintTop_toBottomOf="@+id/enter_first_name" />
+
+    <EditText
+        android:id="@+id/enter_last_name"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dp40"
+        android:layout_marginEnd="@dimen/dp24"
+        android:background="@drawable/radius_black"
+        android:paddingStart="@dimen/_12sdp"
+        android:paddingTop="@dimen/dp8"
+        android:paddingEnd="@dimen/_12sdp"
+        android:paddingBottom="@dimen/dp8"
+        android:text="Enter Last Name"
+        android:layout_marginTop="@dimen/dp8"
+        android:textColor="@color/txt_gray"
+        android:textSize="@dimen/sp14"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/textView21"
+        app:layout_constraintTop_toBottomOf="@+id/textView22" />
+
+    <TextView
+        android:id="@+id/textView23"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/jostregular"
+        android:text="Mobile Number"
+        android:layout_marginTop="@dimen/dp20"
+        android:textColor="@color/txt_black"
+        android:textSize="@dimen/sp16"
+        app:layout_constraintStart_toStartOf="@+id/textView20"
+        app:layout_constraintTop_toBottomOf="@+id/enter_last_name" />
+
+    <EditText
+        android:id="@+id/enter_mob_no"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dp40"
+        android:layout_marginEnd="@dimen/dp24"
+        android:background="@drawable/radius_black"
+        android:paddingStart="@dimen/_12sdp"
+        android:paddingTop="@dimen/dp8"
+        android:paddingEnd="@dimen/_12sdp"
+        android:paddingBottom="@dimen/dp8"
+        android:text="@string/enter_mobile_number"
+        android:layout_marginTop="@dimen/dp8"
+        android:textColor="@color/txt_gray"
+        android:textSize="@dimen/sp14"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/textView21"
+        app:layout_constraintTop_toBottomOf="@+id/textView23" />
+
+    <TextView
+        android:id="@+id/textView24"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/jostregular"
+        android:text="Password"
+        android:layout_marginTop="@dimen/dp20"
+        android:textColor="@color/txt_black"
+        android:textSize="@dimen/sp16"
+        app:layout_constraintStart_toStartOf="@+id/textView20"
+        app:layout_constraintTop_toBottomOf="@+id/enter_mob_no" />
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dp40"
+        android:layout_marginEnd="@dimen/dp24"
+        android:background="@drawable/radius_black"
+        android:paddingStart="@dimen/_12sdp"
+        android:paddingTop="@dimen/dp8"
+        android:paddingEnd="@dimen/_12sdp"
+        android:paddingBottom="@dimen/dp8"
+        android:layout_marginTop="@dimen/dp8"
+        android:hint="@string/enter_password"
+        android:textColor="@color/txt_gray"
+        android:textSize="@dimen/sp14"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/textView21"
+        app:layout_constraintTop_toBottomOf="@+id/textView24" />
+
+    <TextView
+        android:id="@+id/textView25"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/jostregular"
+        android:text="Email (optional)"
+        android:textColor="@color/txt_black"
+        android:layout_marginTop="@dimen/dp20"
+        android:textSize="@dimen/sp16"
+        app:layout_constraintStart_toStartOf="@+id/textView20"
+        app:layout_constraintTop_toBottomOf="@+id/password" />
+
+    <EditText
+        android:id="@+id/email_add_et"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dp40"
+        android:layout_marginEnd="@dimen/dp24"
+        android:background="@drawable/radius_black"
+        android:paddingStart="@dimen/_12sdp"
+        android:paddingTop="@dimen/dp8"
+        android:paddingEnd="@dimen/_12sdp"
+        android:paddingBottom="@dimen/dp8"
+        android:layout_marginTop="@dimen/dp8"
+        android:textColor="@color/txt_gray"
+        android:textSize="@dimen/sp14"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/textView21"
+        app:layout_constraintTop_toBottomOf="@+id/textView25"
+        android:hint="@string/enter_email_address"
+        android:autofillHints="@string/enter_email_address" />
+
+    <TextView
+        android:id="@+id/send_otp_bt"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginStart="@dimen/dp24"
+        android:layout_marginEnd="@dimen/dp24"
+        android:layout_marginBottom="@dimen/dp40"
+        android:background="@drawable/continue_bt"
+        android:fontFamily="@font/jostbold"
+        android:gravity="center"
+        android:text="CONTINUE"
+        android:layout_marginTop="@dimen/dp30"
+        android:textAlignment="center"
+        android:textColor="@color/txt_white"
+        android:textSize="@dimen/sp16"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/email_add_et" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/send_otp_bt">
+
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/jostregular"
+            android:text="Already Have An Account? "
+            android:textColor="@color/txt_gray"
+            android:textSize="@dimen/dp16"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/sign_in"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/sign_in"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/jostregular"
+            android:text="@string/login"
+            android:textColor="@color/primaryColor"
+            android:textSize="@dimen/dp16"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textView7"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="SpUsage" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="@dimen/dp20"
+        android:layout_marginBottom="@dimen/_8sdp"
+        android:src="@drawable/home_indicator_black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
